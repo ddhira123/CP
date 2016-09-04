@@ -1,0 +1,34 @@
+Pertama, kita lihat cara mengecek untuk suatu sekuens, apakah dia k-median atau tidak. Kita catat 2 parameter, yaitu
+equal dan balance.Pengubahan nilai array menjadi parameter dilakukan sesuai berikut :
+
+seq[i] < k : equal = 0, balance = -1
+seq[i] = k : equal = 1, balance = 0
+seq[i] > k : equal = 0, balance = 1
+
+Bisa dilihat bahwa suatu sekuens akan k-median, jika sum(equal) > abs(sum(balance))
+
+Berdasarkan itu, ubah sekuens yang diberi menjadi seperti di atas. Buat prefix sum equal dan balance untuk indeks [0..n].
+misal prefix sum equal dan balance kita sebut masing-masing equal[] dan balance[], untuk tiap indeks i, maka sekuens[j + 1..i]
+merupakan salah satu solusi, jika equal[i] > equal[j] dan equal[i] - equal[j] > abs(balance[i] - balance[j]).
+
+Jika kita visualisasikan balance[] sebagai koordinat x, dan equal[] sebagai koordinat y, bisa dilihat bahwa daerah penyelesaian
+untuk titik (balance[i],equal[i]) akan membentuk segitiga siku-siku seperti bagian atas belah ketupat yang bersudut di titik
+(balance[i],equal[i] - 1).
+
+Kita selesaikan dalam 2 tahap, yakni mencari semua pasangan yang berada di bagian kanan segitiga, dan bagian kiri segitiga.
+Misal kita mengerjakan yang bagian kanan dulu. Akan berlaku pertidaksamaan :
+
+equal[i] - equal[j] > balance[j] - balance[i]
+equal[i] + balance[i] > equal[j] + balance[j]
+
+Kita bisa mengubah equal[] dan balance[] menjadi titik di satu dimensi berdasarkan pertidaksamaan di atas. Oleh karena itu, kita bisa sort berdasarkan balance[], dengan komparasi balance[i] <= balance[j], lalu sweep dari kiri ke kanan. Sebelum sweep, masukkan dulu semua titik ke struktur data. Saat memproses suatu titik, keluarkan titik tersebut dari struktur data, lalu lakukan query untuk mencara banyak titik yang koordinatnya kurang dari titik tersebut berdasarkan pertidaksamaan di atas.
+
+Untuk mencari bagian kiri segitiga mirip, sweep dari kanan ke kiri, tapi pertidaksamaannya menjadi :
+
+equal[i] - equal[j] > balance[i] - balance[j]
+equal[i] - balance[i] > equal[j] - balance[j]
+
+Ubah lagi menjadi titik di satu dimensi, sweep dari kanan ke kiri, lalu pada saat memproses titik lakukan seperti sebelumnya. Untuk kedua kasus, hati-hati ketika menghandle kasus balance[i] = balance[j], agar tidak double-counting.
+
+Karena hanya melakukan sort dan struktur data 1 dimensi (saya menggunakan BIT), maka kompleksitasnya O(N log N)
+

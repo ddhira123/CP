@@ -1,0 +1,132 @@
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+#include <cstdlib>
+#include <cmath>
+#include <string>
+#include <set>
+#include <map>
+#include <queue>
+#include <stack>
+#include <vector>
+#include <bitset>
+#include <cassert>
+#define makmu using
+#define ndasmu namespace
+#define gundulmu std
+
+makmu ndasmu gundulmu;
+
+typedef long long LL;
+typedef pair<int,int> pii;
+typedef pair<double,double> pdd;
+typedef pair<string,string> pss;
+typedef pair<int,double> pid;
+typedef pair<int,LL> pil;
+typedef pair<LL,LL> pll;
+
+#define fi first
+#define se second
+#define mp make_pair
+#define pb push_back
+#define SYNC ios_base::sync_with_stdio(false)
+#define TIE cin.tie(0)
+#define INF 1000000000
+#define INFLL 4000000000000000000LL
+#define EPS 1e-9
+#define MOD 1000000007LL
+#define DEBUG puts("DEBUG")
+
+#ifdef _WIN32
+#define getchar_unlocked getchar
+#endif
+
+#define g getchar_unlocked
+
+int dx8[8]={-1,-1,0,1,1,1,0,-1},dx4[4]={-1,0,1,0};
+int dy8[8]={0,-1,-1,-1,0,1,1,1},dy4[4]={0,-1,0,1};
+
+inline void open(string name){
+ freopen((name+".in").c_str(),"r",stdin);
+ freopen((name+".out").c_str(),"w",stdout);
+}
+
+inline void close(){
+ fclose(stdin);
+ fclose(stdout);
+}
+
+inline int io(){
+ register char c;
+ while(1){
+  c=g();
+  if(c!='\n' && c!=' ') break;
+ }
+ int res=0,sign=1;
+ if(c=='-') sign=-1;
+ else       res=c-'0';
+ while(1){
+  c=g();
+  if(c==' ' || c=='\n' || c==EOF) break;
+  res=(res<<3)+(res<<1)+c-'0';
+ }
+ return res*sign;
+}
+
+///////////////////////////////////////////////////
+//////            End of Template            /////
+/////////////////////////////////////////////////
+
+int ctr;
+int ans[55];
+int ki[55],ka[55];
+int tc,r,c;
+string arr[55];
+
+int main(){
+ SYNC;
+ cin>>tc;
+ for(int t=1;t<=tc;t++){
+  cin>>r>>c;
+  bool valid=1;
+  for(int i=0;i<r;i++){
+   cin>>arr[i];
+   bool found=0;
+   for(int j=0;j<c && !found;j++)
+    if(arr[i][j]=='0') found=1;
+   valid&=found; 
+  }
+  cout<<"Case "<<t<<": ";
+  int ret;
+  if(!valid)
+   ret=-1;
+  else{
+   for(int i=0;i<c;i++)
+    ans[i]=0;
+   for(int i=0;i<r;i++){
+    ctr=1000;
+    for(int j=0;j<c;j++){
+     if(arr[i][j]=='1') ctr++;
+     else               ctr=0;
+     ki[j]=ctr;
+    }
+    ctr=1000;
+    for(int j=c-1;j>=0;j--){
+     if(arr[i][j]=='1') ctr++;
+     else               ctr=0;
+     ka[j]=ctr;
+    }
+    for(int j=0;j<c;j++)
+     ans[j]+=min(ki[j],ka[j]);
+   }
+   ret=INF;
+   for(int i=0;i<c;i++)
+    ret=min(ret,ans[i]);
+  }
+  cout<<ret<<"\n";  
+ }
+ //puts("ganteng");
+ return 0;
+}
+
