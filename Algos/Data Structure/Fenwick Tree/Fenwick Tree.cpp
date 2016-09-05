@@ -1,3 +1,14 @@
+/**
+	Fenwick Tree
+
+	A data structure that is usually used for counting sum in some range.
+	Can be used for RMQ for LIS. Actually in general case, it can't be used for RMQ.
+	But according to http://www.ioinformatics.org/oi/shtm/v9_2015_39_44.shtml , it can be done.
+
+	Complexity:
+		- Update : O(log N)
+		- Query : O(log N)
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
