@@ -1,6 +1,8 @@
 # CP
 Competitive Programming related stuffs
 
-I use azure97 as my handle in lots of Online Judge, except UVa (azul97) and Codeforces (copcolicop).
-I'll gradually add codes from contests and personal template for algos.
-Warning: Old codes, mostly in UVa, are hard to read.
+Saya menggunakan azure97 sebagai handle di berbagai Online Judge, kecuali UVa (azul97) dan Codeforces (copcolicop).
+
+Saya akan (berusaha) menambahkan code dari berbagai kontes dan algoritma tertentu.
+
+Warning: Code lama, terutama yang di UVa, sulit untuk dibaca.

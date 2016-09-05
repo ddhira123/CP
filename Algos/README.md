@@ -1,4 +1,4 @@
 # Algos
 Collection of algorithms
 
-The purpose of "Algos" is for learning algorithms, hence the name "Algos" instead of "Template".
+Tujuan "Algos" adalah untuk mempelajari algoritma tertentu. Oleh karena itu, digunakan nama "Algos", dan bukan "Template".
