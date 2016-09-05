@@ -6,7 +6,7 @@ Contoh soal:
 
 - [UVa - Potentiometers](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3238)
 - [UVa - Ping Pong](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4174)
-- [UVa - Insertion Sort](http://www.spoj.com/problems/CODESPTB/)
+- [SPOJ - Insertion Sort](http://www.spoj.com/problems/CODESPTB/)
 - [SPOJ - Building Bridges (HARD)](http://www.spoj.com/problems/BRDGHRD/)
 - [SPOJ - Matrix Summation](http://www.spoj.com/problems/MATSUM/)
 - [SPOJ - Alia and Cryptography](http://www.spoj.com/problems/CONOR/)
