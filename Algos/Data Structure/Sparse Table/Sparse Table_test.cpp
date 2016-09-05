@@ -1,3 +1,4 @@
+// SPOJ - RMQSQ
 #include <bits/stdc++.h>
 using namespace std;
 
