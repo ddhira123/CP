@@ -6,7 +6,7 @@ Dalam mencari root dari suatu node, kita bisa men-traverse parent dari node, hin
 
 Menggabungkan dua komponen berbeda dapat dilakukan dengan mudah. Misal root dari komponen yang ingin digabungkan adalah u dan v. Maka, kita tinggal mengeset parent dari u menjadi v, atau sebaliknya. Terdapat satu optimisasi dalam menentukan yang mana yang dijadikan parent, yaitu rank. Namun, biasanya tanpa rank juga jalannya sudah cukup cepat, :v.
 
-Apabila dilakukan penggabungan semua node, dengan path compression namun tanpa rank, kompleksitasnya O(N log N). Dengan rank, kompleksitasnya menjadi amortized O(N \alpha(N)).
+Apabila dilakukan penggabungan semua node, dengan path compression namun tanpa rank, kompleksitasnya O(N log N). Dengan rank, kompleksitasnya menjadi amortized O(N &alpha;(N)).
 
 Selain itu, terdapat beberapa varian dalam representasi Disjoint Set. Yang cukup umum adalah dimana root memiliki parent dirinya sendiri. Terdapat juga varian yang menyatakan root sebagai node yang parentnya berupa nilai negatif, yaitu negatif dari ukuran komponen, seperti yang terdapat pada file Disjoint Set.cpp
 
