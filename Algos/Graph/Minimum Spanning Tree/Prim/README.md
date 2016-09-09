@@ -11,7 +11,7 @@ Algo O((E+V) log E) memanfaatkan priority_queue dengan prioritas cost minimal. A
 - Apabila ternyata vertex sudah diambil, skip.
 - Apabila ternyata cost-nya tak hingga, ubah costnya menjadi 0. Dummy edge ini menandai awal suatu komponen. 
 
-Selanjutnya, ambil edge (sekaligus vertex) tersebut dan catat costnya. Lalu, lakukan ekspansi, masukkan edge-edge yang terhubung dengan vertex tersebut ke priority_queue. Ulangi sampai semua vertex diambil.
+Selanjutnya, ambil edge (sekaligus vertex) tersebut dan catat costnya. Lalu, lakukan ekspansi, masukkan edge-edge yang terhubung dengan vertex tersebut ke priority_queue. Ulangi sampai priority_queue kosong.
 
 ## O(V<sup>2</sup>)
 
