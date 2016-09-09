@@ -17,7 +17,7 @@ int n, m;
 long long primPriorityQueue() {
 	priority_queue<pii,vector<pii>,greater<pii>> pq;
 
-	for(int i = 1 ; i <= n ; i++) {
+	for(int i = 1 ; i <= 1 ; i++) {
 		pq.push({INF,i});
 	}
 

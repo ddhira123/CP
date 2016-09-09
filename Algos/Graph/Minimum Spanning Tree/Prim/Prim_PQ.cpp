@@ -25,9 +25,9 @@ long long primPriorityQueue() {
 	// pair<cost,vertex>
 	priority_queue<pii,vector<pii>,greater<pii>> pq;
 
-	// if we change i <= n to i <= 1
-	// then we can't find minimum spanning forest in O(E log E)
-	for(int i = 1 ; i <= n ; i++) {
+	// if we change i <= 1 to i <= n
+	// then we will have minimum spanning forest instead
+	for(int i = 1 ; i <= 1 ; i++) {
 		pq.push({INF,i});
 	}
 
