@@ -1,0 +1,93 @@
+<!-- String Seimbang -->
+<h3>Deskripsi</h3>
+
+<p>Pak Chanek senang membaca soal-soal <em>Competitive Programming</em>. Suatu hari, ia membaca topik tentang tanda kurung. Pada topik tersebut, diperkenalkan istilah seimbang. Penasaran, Pak Chanek membacanya lebih lanjut. Ternyata, sebuah string yang hanya terdiri dari karakter ( dan ) dikatakan seimbang, jika memenuhi salah satu dari 3 bentuk berikut:</p>
+
+<ol>
+	<li>String tersebut berupa ().</li>
+	<li>String tersebut berupa (A), dengan A suatu string seimbang.</li>
+	<li>String tersebut berupa AB, dengan A dan B suatu string seimbang.</li>
+</ol>
+
+<p>Untuk menguji kemampuannya, Pak Chanek lalu membuat suatu<em> </em>string S, yang hanya terdiri dari karakter ( dan ), serta memiliki panjang N. Lalu, ia menghitung banyaknya substring-nya yang seimbang. Namun, karena ukurannya yang cukup besar, akhirnya Pak Chanek kewalahan! Bantulah Pak Chanek menyelesaikan persoalan ini.</p>
+
+<p>Suatu string U dikatakan substring dari V apabila terdapat (i,j), 1 &le; i &le; j &le; N, sehingga U = V[i..j]. Dua buah substring, masing-masing pada rentang [a,b] dan [c,d], dikatakan berbeda apabila a &ne; b atau c &ne; d.</p>
+
+<h3>Format Masukan</h3>
+
+<p>Baris pertama berisi sebuah bilangan bulat N, panjang dari string milik Pak Chanek.</p>
+
+<p>Baris kedua berisi sebuah string S, string milik Pak Chanek.</p>
+
+<h3>Format Keluaran</h3>
+
+<p>Keluarkan satu baris berisi sebuah bilangan bulat, banyaknya substring dari S yang merupakan string seimbang.</p>
+
+<h3>Contoh Masukan 1</h3>
+
+<pre>
+6
+(()())
+</pre>
+
+<h3>Contoh Keluaran 1</h3>
+
+<pre>
+4
+</pre>
+
+<h3>Contoh Masukan 2</h3>
+
+<pre>
+5
+())()
+</pre>
+
+<h3>Contoh Keluaran 2</h3>
+
+<pre>
+2
+</pre>
+
+<h3>Penjelasan</h3>
+
+<p>Pada contoh masukan 1, substring yang merupakan substring seimbang adalah (), (), ()(), dan (()()). Perhatikan bahwa () dihitung dua kali karena muncul pada dua tempat berbeda.</p>
+
+<h3>Subsoal</h3>
+
+<p>Pada setiap subsoal berlaku:</p>
+
+<ul>
+	<li>1 &le; N &le; 1.000.000</li>
+	<li>S hanya terdiri dari karakter ( dan )</li>
+</ul>
+
+<h4>Subsoal 1 (16 poin)</h4>
+
+<ul>
+	<li>1 &le; N &le; 200</li>
+</ul>
+
+<h4>Subsoal 2 (23 poin)</h4>
+
+<ul>
+	<li>1 &le; N &le; 2.000</li>
+</ul>
+
+<h4>Subsoal 3 (11 poin)</h4>
+
+<ul>
+	<li>Terdapat i, dengan 1 &le; i &le; N, sehingga S<sub>a</sub> = S<sub>a-1</sub> untuk 1 &lt; a &le; i dan S<sub>b</sub> = S<sub>b+1</sub> untuk i &lt; b &lt; N</li>
+</ul>
+
+<h4>Subsoal 4 (11 poin)</h4>
+
+<ul>
+	<li>S_i &ne; S<sub>i-1</sub> untuk 1 &lt; i &le; N</li>
+</ul>
+
+<h4>Subsoal 5 (39 poin)</h4>
+
+<ul>
+	<li>Tidak ada batasan khusus</li>
+</ul>
