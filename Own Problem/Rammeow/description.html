@@ -1,0 +1,52 @@
+<h3>Deskripsi</h3>
+
+<p>Ramma, 20 tahun, adalah pemuda yang agak normal. Ramma senang membanggakan kegantengannya, namun, tetap saja ia lebih senang bermain dengan kucing. Saat ini, ia sering datang ke taman yang memiliki banyak kucing, yaitu NyanPark. Kucing-kucing di NyanPark memiliki kandang dan jenis. Terdapat N kandang di NyanPark, dan kucing yang tinggal di kandang ke-i merupakan kucing jenis T<sub>i</sub>.</p>
+
+<p>Setiap harinya, Ramma selalu datang ke NyanPark. Setiap kali di NyanPark, ia akan bermain dengan sejumlah kucing yang terdapat di situ. Minimal, Ramma akan bermain dengan 1 kucing. Uniknya, Ramma memiliki beberapa aturan untuk bermain dengan kucing di NyanPark. Pertama, ia hanya mau bermain dengan kucing-kucing yang tinggal di kandang yang <strong>berurutan</strong>. Sebagai contoh, ia mau bermain dengan kucing yang tinggal di kandang ke-3, 4, dan 5, namun ia tidak mau bermain dengan kucing yang tinggal di kandang ke-3 dan ke-5 saja. Selain itu, karena sulit membedakan kucing yang jenisnya sama, ia ingin agar kucing-kucing yang ia ajak bermain <strong>semua jenisnya berbeda</strong>.</p>
+
+<p>Ramot, penjaga NyanPark, tidak senang dengan Ramma karena beberapa hal. Oleh karena itu, selama Q hari kedepan, ia akan membatasi kucing-kucing yang bisa diajak bermain. Pada hari ke-i, Ramot hanya memperbolehkan kucing yang tinggal di kandang ke-L<sub>i</sub> sampai ke-R<sub>i</sub> untuk diajak bermain.</p>
+
+<p>Tentunya, ini membatasi pilihan kucing-kucing yang bisa Ramma ajak bermain. Walaupun Ramma merasa sedih, ia justru merasa bertanya-tanya. Untuk setiap harinya, ada berapa cara berbeda memilih kucing-kucing untuk diajak bermain? Dua cara dikatakan berbeda apabila terdapat kucing yang diajak bermain pada salah satu cara, namun tidak pada cara yang lain.</p>
+
+<h3>Format Masukan</h3>
+
+<p>Baris pertama berisi dua buah bilangan bulat N dan Q, banyak kucing di NyanPark dan banyak hari.</p>
+
+<p>Baris kedua berisi N buah bilangan bulat T<sub>i</sub>, jenis kucing yang tinggal di kandang ke-i.</p>
+
+<p>Q baris selanjutnya berisi dua buah bilangan bulat L<sub>i</sub> dan R<sub>i</sub>, yang menyatakan bahwa hanya kucing yang tinggal di kandang ke-L<sub>i</sub>, L<sub>i</sub>+1, ..., R<sub>i</sub> yang bisa diajak bermain pada hari ke-i.</p>
+
+<h3>Format Keluaran</h3>
+
+<p>Untuk setiap hari, keluarkan sebuah bilangan bulat, banyak cara berbeda memilih kucing-kucing untuk diajak bermain.</p>
+
+<h3>Contoh Masukan</h3>
+
+<pre>
+7 5
+1 5 3 1 7 5 5
+5 6
+6 7
+1 3
+1 4
+1 7
+</pre>
+
+<h3>Contoh Keluaran</h3>
+
+<pre>
+3
+2
+6
+9
+18
+</pre>
+
+<h3>Batasan</h3>
+
+<ul>
+	<li>1 &le; N &le; 100.000</li>
+	<li>1 &le; Q &le; 100.000</li>
+	<li>1 &le; T<sub>i</sub> &le; N</li>
+	<li>1 &le; L<sub>i</sub> &le; R<sub>i </sub>&le; N</li>
+</ul>

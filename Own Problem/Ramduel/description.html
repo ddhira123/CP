@@ -1,0 +1,52 @@
+<h3>Deskripsi</h3>
+
+<p>Nivri dan Ramma merupakan sepasang sahabat karib. Mereka juga senang berkompetisi. Alhasil, hampir setiap hari mereka bertanding, dari adu panco, bermain gundu, sampai adu ganteng (jangan tanya bagaimana caranya!). Suatu hari, mereka bertanding mengenai kecantikan string. Ramma memiliki string S, sedangkan Nivri memiliki string T. Keduanya memiliki panjang yang sama, dan hanya terdiri dari huruf kecil alfabet. Pertandingan ini berlangsung sangat alot, karena keduanya sama-sama merasa bahwa string miliknya lah yang paling cantik.</p>
+
+<p>Siang hari itu, mereka sedang belajar tentang <em>longest common subsequence</em> (LCS). <em>Subsequence </em>dari suatu string merupakan hasil penghapusan 0, sebagian, atau semua karakter dari string tersebut, tanpa mengubah urutan. Contohnya, &quot;rot&quot; merupakan <em>subsequence</em> dari &quot;ramot&quot;, namun &quot;ar&quot; bukan. LCS dari dua buah string merupakan <em>subsequence </em>terpanjang yang merupakan <em>subsequence</em> dari kedua string tersebut. Untuk mempermudah, didefinisikan LCS(x,y) sebagai panjang dari <em>longest common subsequence</em> string x dan y.</p>
+
+<p>Pertandingan Nivri dan Ramma ini membuat sensei (guru) mereka kesal. Agar mereka dapat akur kembali, sensei lalu memberikan PR berikut:</p>
+
+<blockquote>
+<p>Buatlah sebuah string R. String tersebut harus memiliki panjang yang sama dengan S dan T, dan hanya terdiri dari huruf kecil alfabet. Selain itu, LCS(R,S) + LCS(R,T) harus maksimal.</p>
+</blockquote>
+
+<p>Nivri dan Ramma pun lupa dengan pertandingan mereka karena PR tersebut terlalu sulit! Sekarang, mereka justru membuat PR tersebut sebagai pertandingan mereka, dengan pemenangnya adalah yang menemukan jawabannya terlebih dahulu. Karena tidak ingin kalah dari Nivri, Ramma lalu meminta bantuanmu. Bantulah Ramma!</p>
+
+<h3>Format Masukan</h3>
+
+<p>Baris pertama berisi sebuah string S, string milik Ramma.</p>
+
+<p>Baris kedua berisi sebuah string T, string milik Nivri.</p>
+
+<h3>Format Keluaran</h3>
+
+<p>Satu baris berisi sebuah string R, jawaban untuk PR dari sensei. Jika ada beberapa R yang memenuhi, keluarkan yang mana saja.</p>
+
+<h3>Contoh Masukan</h3>
+
+<pre>
+ddadbebe
+ecbdccae
+</pre>
+
+<h3>Contoh Keluaran</h3>
+
+<pre>
+eddccabe
+</pre>
+
+<h3>Penjelasan</h3>
+
+<ul>
+	<li>LCS(&quot;eddccabe&quot;,&quot;ddadbebe&quot;) = 5, contoh <em>subsequence</em>-nya adalah &quot;ddabe&quot;.</li>
+	<li>LCS(&quot;eddccabe&quot;,&quot;ecbdccae&quot;) = 6, contoh <em>subsequence</em>-nya adalah &quot;edccae&quot;.</li>
+</ul>
+
+<p>Sehingga, totalnya adalah 11. Selain &quot;eddccabe&quot;, masih banyak string R yang menyebabkan LCS(R,S) + LCS(R,T) = 11, seperti &quot;dbdcadbe&quot; dan &quot;dddbebce&quot;. Tidak ada R&#39;, sehingga LCS(R&#39;,S) + LCS(R&#39;,T) &gt; 11.</p>
+
+<h3>Batasan</h3>
+
+<ul>
+	<li>1 &le; |S| = |T| &le; 300</li>
+	<li>Karakter dari S dan T hanya terdiri dari huruf kecil alfabet.</li>
+</ul>
