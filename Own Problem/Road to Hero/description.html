@@ -1,8 +1,8 @@
 <h3>Deskripsi</h3>
 
-<p>Awalnya, Saitammar hanyalah pegawai negeri biasa yang menjalani hidupnya yang biasa-biasa saja. Bosan dengan hidupnya yang monoton, ia pun memutuskan untuk menjadi pahlawan! Tentunya, menjadi pahlawan bukanlah hal yang mudah. Saitammar harus berlatih keras. Di antaranya, <em>push-up</em> 100 kali, <em>sit-up </em>100 kali, dan <em>squat </em>100 kali setiap hari. Tidak kalah penting, Saitammar juga harus lari pagi setiap harinya.</p>
+<p>Awalnya, Saitammar hanyalah pegawai negeri biasa yang menjalani hidupnya yang biasa-biasa saja. Bosan dengan hidupnya yang monoton, ia pun memutuskan untuk menjadi pahlawan! Tentunya, menjadi pahlawan bukanlah hal yang mudah. Saitammar harus berlatih keras. Di antaranya, push-up 100 kali, sit-up 100 kali, dan squat 100 kali setiap hari. Tidak kalah penting, Saitammar juga harus lari pagi setiap harinya.</p>
 
-<p>Diketahui bahwa, terdapat N persimpangan dan M jalan satu arah pada kota Z, kota tempat Saitammar tinggal. Jalan ke-i merupakan jalan yang dimulai di persimpangan U<sub>i</sub> dan berakhir di V<sub>i</sub>. Uniknya, jika hanya dapat menggunakan M jalan tersebut, dari suatu persimpangan, kita tidak dapat kembali ke persimpangan itu lagi. Pada setiap sesi lari paginya, Saitammar akan memulai perjalanan dari persimpangan 1 dan berakhir di persimpangan ke-N. Tentu saja, terdapat rute yang menghubungkan persimpangan 1 dan persimpangan ke-N.</p>
+<p>Diketahui bahwa, terdapat N persimpangan dan M jalan satu arah pada kota Z, kota tempat Saitammar tinggal. Jalan ke-i merupakan jalan yang dimulai di persimpangan ke-U<sub>i</sub> dan berakhir di persimpangan ke-V<sub>i</sub>. Uniknya, jika hanya dapat menggunakan M jalan tersebut, dari suatu persimpangan, kita tidak dapat kembali ke persimpangan itu lagi. Pada setiap sesi lari paginya, Saitammar akan memulai perjalanan yang bermula di persimpangan ke-1 dan berakhir di persimpangan ke-N.</p>
 
 <p>Sebenarnya, kota Z bukanlah kota yang aman. Pada setiap jalan, terdapat monster yang memiliki nilai kekuatan tertentu. Monster yang berada di jalan ke-i memiliki kekuatan sebesar P<sub>i</sub>. Sebagai bagian dari latihannya, Saitammar memutuskan untuk mengalahkan semua monster yang ia temui di perjalanannya. Sudah jelas bahwa Saitammar akan mendapatkan kemampuan lebih jika mengalahkan monster yang kekuatannya tinggi. Akan tetapi, Saitammar tidak ingin hanya mengalahkan monster yang kuat. Ia lebih menginginkan rata-rata kekuatan monster yang tinggi. Dengan kata lain, ia ingin memaksimalkan jumlah kekuatan monster yang ia kalahkan dibagi jumlah jalan yang ia tempuh.</p>
 
@@ -10,15 +10,13 @@
 
 <h3>Format Masukan</h3>
 
-<p>Baris pertama berisi 2 bilangan bulat, N dan M, masing-masing menyatakan banyak persimpangan dan banyaknya jalan.</p>
+<p>Baris pertama berisi 2 buah bilangan bulat, N dan M, masing-masing menyatakan banyak persimpangan dan banyaknya jalan.</p>
 
-<p>M baris selanjutnya berisi 3 bilangan bulat, U<sub>i</sub>, V<sub>i</sub>, dan P<sub>i</sub>, yang menyatakan bahwa jalan ke-i merupakan jalan satu arah dari persimpangan U<sub>i</sub>dan berakhir di V<sub>i</sub>, serta memiliki monster dengan kekuatan P<sub>i</sub>.</p>
+<p>M baris selanjutnya berisi 3 buah bilangan bulat, U<sub>i</sub>, V<sub>i</sub>, dan P<sub>i</sub>, yang menyatakan bahwa jalan ke-i merupakan jalan satu arah dari persimpangan ke-U<sub>i</sub> dan berakhir di persimpangan ke-V<sub>i</sub>, serta memiliki monster dengan kekuatan P<sub>i</sub>.</p>
 
 <h3>Format Keluaran</h3>
 
-<p>Keluarkan sebuah bilangan real, rata-rata maksimum yang bisa didapat Saitammar.</p>
-
-<p>Jawaban akan dianggap benar apabila kesalahan mutlak atau relatif jawaban tidak melebihi 10<sup>-6</sup></p>
+<p>Keluarkan sebuah bilangan real, rata-rata maksimum yang bisa didapat Saitammar. Jawaban akan dianggap benar apabila kesalahan mutlak atau relatif jawaban kurang dari 10<sup>-6</sup>.</p>
 
 <h3>Contoh Masukan</h3>
 
@@ -42,7 +40,7 @@
 	<li>2 &le; N &le; 50.000</li>
 	<li>N-1 &le; M &le; 100.000</li>
 	<li>1 &le; U<sub>i</sub>, V<sub>i</sub> &le; N</li>
-	<li> U<sub>i</sub> &ne; V<sub>i</sub></li>
+	<li>U<sub>i</sub> &ne; V<sub>i</sub></li>
 	<li>1 &le; P<sub>i</sub> &le; 1.000.000</li>
 	<li>Terdapat rute yang menghubungkan persimpangan ke-1 dengan persimpangan ke-N</li>
 </ul>
@@ -64,7 +62,7 @@
 <h4>Subsoal 3 (15 poin)</h4>
 
 <ul>
-	<li>Semua perjalanan dari persimpangan 1 ke persimpangan N menggunakan jumlah jalan yang sama</li>
+	<li>Semua rute dari persimpangan ke-1 ke persimpangan ke-N menggunakan banyak jalan yang sama</li>
 </ul>
 
 <h4>Subsoal 4 (43 poin)</h4>
