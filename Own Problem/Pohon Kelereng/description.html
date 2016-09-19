@@ -1,0 +1,94 @@
+<h3>Deskripsi</h3>
+
+<p>Pak Chanek baru saja mendapat hadiah berupa <em>tree</em> yang terbuat dari N kelereng. <em>Tree </em>tersebut adalah <em>rooted tree </em>yang berakar di kelereng ke-1, dan <em>parent </em>dari kelereng ke-i adalah kelereng ke-P<sub>i</sub>. Selain itu, pada setiap kelereng tertulis sebuah angka, yang menandakan nilai keindahan kelereng tersebut. Yang menarik, setiap kelereng dilengkapi dengan lampu, sehingga bisa menyala dengan indah.</p>
+
+<p>Sekarang, Pak Chanek ingin bermain-main dengan pohon tersebut. Awalnya, semua lampu kelereng dalam keadaan mati. Ia melakukan beberapa operasi, yang terdiri dari 2 jenis:</p>
+
+<ol>
+	<li>
+	<p>Mengubah keadaan lampu kelereng ke-V<sub>i</sub>. Dengan kata lain, apabila lampu kelereng ke-V<sub>i</sub> mati, maka ia menjadi menyala. Begitu sebaliknya.</p>
+	</li>
+	<li>
+	<p>Mencari tahu total nilai keindahan kelereng-kelereng yang menyala pada <em>subtree</em> yang berakar di kelereng ke-V<sub>i</sub>, dengan nilai keindahan yang sama <strong>hanya dihitung tepat sekali.</strong></p>
+	</li>
+</ol>
+
+<p>Sekarang, Pak Chanek justru kebingungan dalam memeriksa kebenaran jawaban setiap operasi kedua. Bantulah Pak Chanek!</p>
+
+<h3>Format Masukan</h3>
+
+<p>Pada awal masukan, terdapat sebuah bilangan T yang menyatakan jumlah kasus uji. Setiap kasus uji akan dinyatakan seperti berikut.</p>
+
+<p>Baris pertama berisi 2 buah bilangan bulat N dan Q, yang menyatakan banyak kelereng dan banyak operasi.</p>
+
+<p>Baris kedua berisi N buah bilangan bulat X<sub>1</sub>, X<sub>2</sub>, ... , X<sub>N</sub>, dengan X<sub>i</sub> menyatakan nilai keindahan kelereng ke-i.</p>
+
+<p>Baris ketiga berisi N-1 bilangan bulat P<sub>2</sub>, P<sub>3</sub>, ... , P<sub>N</sub>, dengan P<sub>i</sub> adalah <em>parent</em> dari kelereng ke-i.</p>
+
+<p>Q baris selanjutnya akan berisi 2 buah bilangan OP<sub>i</sub> dan V<sub>i</sub>, dimana:</p>
+
+<ul>
+	<li>
+	<p>Jika OP<sub>i<em> </em></sub>= 1, maka Pak Chanek mengubah kondisi kelereng ke-V<sub>i</sub>.</p>
+	</li>
+	<li>
+	<p>Jika OP<sub>i<em> </em></sub>= 2, maka Pak Chanek mencari tahu total nilai keindahan kelereng-kelereng yang menyala pada <em>subtree</em> yang berakar di kelereng ke-V<sub>i</sub>, dengan tiap nilai keindahan yang sama hanya dihitung sekali.</p>
+	</li>
+</ul>
+
+<h3>Format Keluaran</h3>
+
+<p>Untuk tiap operasi jenis 2, keluarkan satu baris berisi sebuah bilangan bulat, total nilai keindahan kelereng-kelereng yang menyala pada <em>subtree</em> yang berakar di kelereng ke-V<sub>i</sub>, dengan tiap nilai keindahan yang sama hanya dihitung sekali.</p>
+
+<h3>Contoh Masukan</h3>
+
+<pre>
+1
+7 11
+3 2 5 1 2 1 4
+1 1 2 2 3 3
+1 6
+2 1
+1 4
+2 1
+1 2
+2 2
+2 1
+1 4
+2 1
+1 6
+2 1
+</pre>
+
+<h3>Contoh Keluaran</h3>
+
+<pre>
+1
+1
+3
+3
+3
+2
+</pre>
+
+<h3>Penjelasan</h3>
+
+<p>Pada operasi ke-4, kelereng yang menyala dan berada pada <em>subtree</em> yang berakar di kelereng ke-1 adalah kelereng&nbsp; ke-4 dan ke-6. Nilai keindahan keduanya adalah 1. Maka, total keindahan, dengan hanya menghitung nilai keindahan yang sama tepat sekali adalah 1.</p>
+
+<p>Pada operasi ke-7, kelereng yang menyala dan berada pada <em>subtree</em> yang berakar di kelereng ke-1 adalah kelereng nomor 2, 4 dan 6. Kelereng ke-2 memiliki nilai keindahan 2, sementara kelereng ke-4 dan ke-6 memiliki nilai keindahan 1. Maka, total keindahan, dengan hanya menghitung nilai keindahan yang sama tepat sekali adalah 1+2 = 3.</p>
+
+<h3>Batasan</h3>
+
+<ul>
+	<li>1 &le; T &le; 8</li>
+	<li>1 &le; N &le; 100.000</li>
+	<li>1 &le; Q &le; 100.000</li>
+	<li>1 &le; X<sub>i</sub> &le; 10<sup>9</sup></li>
+	<li>1 &le; P<sub>i </sub>&le; i-1, untuk 2 &le; i &le; N.</li>
+	<li>1 &le; OP<sub>i</sub> &le; 2</li>
+	<li>1 &le; V<sub>i</sub> &le; N</li>
+</ul>
+
+<h3>Peringatan</h3>
+
+<p>Test data cukup besar. Disarankan menggunakan I/O yang cepat, seperti <em>scanf</em> pada C++ dan <em>BufferedReader</em> pada Java.</p>

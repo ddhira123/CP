@@ -1,0 +1,73 @@
+<h3>Deskripsi</h3>
+
+<p>Pada hari ini, Pak Chanek baru saja mengajari siswa kelas 3E tentang Faktor Persekutuan Terbesar (FPB). Sayangnya, mereka belum terlalu memahaminya. Akhirnya, mereka memutuskan untuk berlatih sepulang sekolah.</p>
+
+<p>Sore harinya, siswa kelas 3E yang berjumlah K orang menyiapkan N buah kartu. Lalu, mereka menuliskan suatu angka pada setiap kartu, dengan kartu ke-i memiliki angka A<sub>i</sub>. Setelah meletakkan semua kartu di meja, mereka berlatih seperti berikut:</p>
+
+<ol>
+	<li>Satu per satu, para siswa mengambil sebagian kartu yang terdapat di meja. Setiap siswa mengambil setidaknya satu kartu. Satu kartu diambil oleh paling banyak satu siswa. <strong>Bisa saja terdapat beberapa kartu yang tidak diambil siapapun.</strong></li>
+	<li>Masing-masing siswa menghitung FPB dari angka-angka yang tertera pada kartu-kartu yang mereka ambil.</li>
+	<li>Terakhir, para siswa menjumlahkan semua FPB yang sudah mereka hitung masing-masing. Sebut saja jumlahan ini sebagai S.</li>
+</ol>
+
+<p>Kebetulan, Pak Chanek melihat siswa-siswanya yang sedang berlatih. Pak Chanek justru lebih tertarik dengan pertanyaan berikut: jika para siswa melakukan semua kemungkinan pengambilan tepat sekali, maka berapa jumlah dari semua S yang dihasilkan? Walaupun Pak Chanek seorang ahli matematika, ternyata ia tidak bisa menjawabnya! Oleh karena itu, Pak Chanek meminta bantuanmu. Berhubung hasilnya bisa sangat besar, Pak Chanek hanya ingin hasilnya modulo 10<sup>9</sup>+7.</p>
+
+<p>Dua pengambilan dikatakan berbeda jika setidaknya terdapat sebuah x, sehingga salah satu dari dua ini terpenuhi:</p>
+
+<ul>
+	<li>Pada salah satu pengambilan, kartu ke-x diambil oleh salah satu siswa, namun pada pengambilan yang lain tidak.</li>
+	<li>Kartu ke-x diambil oleh siswa yang berbeda pada kedua pengambilan tersebut.</li>
+</ul>
+
+<p>Untuk lebih jelasnya perhatikan contoh masukan.</p>
+
+<h3>Format Masukan</h3>
+
+<p>Baris pertama berisi sebuah bilangan bulat T yang menyatakan jumlah kasus uji. Setiap kasus uji akan dinyatakan sebagai berikut.</p>
+
+<p>Baris pertama berisi dua buah bilangan bulat K dan N , yaitu jumlah siswa di kelas 3E dan jumlah kartu yang mereka gunakan.</p>
+
+<p>Baris kedua berisi N buah bilangan bulat A<sub>i</sub>, angka pada kartu yang digunakan siswa kelas 3E.</p>
+
+<h3>Format Keluaran</h3>
+
+<p>Untuk setiap kasus uji, keluarkan satu buah bilangan bulat, jawaban pertanyaan Pak Chanek modulo 10<sup>9</sup>+7.</p>
+
+<h3>Contoh Masukan</h3>
+
+<pre>
+2
+2 2
+2 2
+2 3
+5 2 4
+</pre>
+
+<h3>Contoh Keluaran</h3>
+
+<pre>
+8
+74
+</pre>
+
+<h3>Penjelasan</h3>
+
+<p>Pada kasus uji pertama, terdapat 2 kemungkinan pengambilan:</p>
+
+<ol>
+	<li>Siswa pertama mengambil kartu pertama, lalu siswa kedua mengambil kartu kedua. FPB masing-masing 2 dan 2, sehingga S = 4.</li>
+	<li>Siswa pertama mengambil kartu kedua, lalu siswa kedua mengambil kartu pertama. FPB masing-masing 2 dan 2, sehingga S = 4.</li>
+</ol>
+
+<p>Jumlahannya adalah 4+4 = 8.</p>
+
+<p>Pada kasus uji kedua, terdapat 12 kemungkinan pengambilan, dimana total S untuk semua kemungkinan pengambilan adalah 74.</p>
+
+<h3>Batasan</h3>
+
+<ul>
+	<li>1 &le; T &le; 10</li>
+	<li>1 &le; K &le; 500</li>
+	<li>K &le; N &le; 100.000</li>
+	<li>1 &le; A<sub>i</sub> &le; 100.000</li>
+</ul>
