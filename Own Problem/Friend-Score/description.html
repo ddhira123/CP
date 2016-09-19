@@ -1,0 +1,69 @@
+<h3>Deskripsi</h3>
+
+<p>Saat ini, Pak Chanek sedang menggarap suatu aplikasi baru yang bernama Friend-Zone. Aplikasi ini dapat digunakan oleh suatu perusahaan untuk mengetahui Friend-Score perusahaannya. Friend-Score didefinisikan sebagai jumlah dari pertemanan yang terjadi antar karyawan-karyawan suatu perusahaan.</p>
+
+<p>Untuk mengetes aplikasinya, Pak Chanek meminta bantuan N orang sahabatnya. Diketahui di antara sahabat-sahabatnya ini terdapat M buah pertemanan. Akan tetapi, pertemanan mereka belum tentu bersifat transitif, yaitu jika A berteman dengan B, dan B berteman dengan C, belum tentu A berteman dengan C. Awalnya, N orang sahabatnya ini bekerja di perusahaan masing-masing, yang berbeda satu sama lain. Untuk mengetes Friend-Zone,&nbsp; dengan menyalahgunakan kekuasaannya, setiap hari Pak Chanek akan melakukan salah satu dari tindakan berikut:</p>
+
+<ol>
+	<li>Menggabungkan 2 buah perusahaan berbeda menjadi satu. Akibatnya, pekerja dari 2 buah perusahaan itu menjadi bekerja di perusahaan gabungan itu.</li>
+	<li>Mencari tahu Friend-Score dari perusahaan tempat salah satu sahabatnya bekerja saat ini.</li>
+</ol>
+
+<p>Agar hasilnya baik, Pak Chanek meminta bantuan banyak sahabatnya. Namun, akibatnya Pak Chanek kewalahan untuk mengecek kinerja Friend-Zone secara manual! Sebagai sahabatnya (yang tidak dijadikan kelinci percobaan), bantulah Pak Chanek!</p>
+
+<h3>Format Masukan</h3>
+
+<p>Baris pertama berisi sebuah bilangan bulat T, yang menyatakan banyaknya kasus uji. Setiap kasus uji akan dinyatakan sebagai berikut.</p>
+
+<p>Baris pertama berisi bilangan bulat N, M, dan Q, yang masing-masing menyatakan banyak orang, banyak pertemanan, dan banyak hari.</p>
+
+<p>M baris selanjutnya berisi 2 bilangan bulat U<sub>i </sub>dan V<sub>i</sub>, yang menyatakan bahwa U<sub>i </sub>dan V<sub>i</sub> berteman.</p>
+
+<p>Q baris selanjutnya berisi tindakan pada setiap hari, yang diawali bilangan bulat P<sub>i</sub>.</p>
+
+<ul>
+	<li>Jika P<sub>i</sub> = 1, maka akan diikuti 2 bilangan bulat A<sub>i </sub>dan B<sub>i</sub>, yang berarti pada hari itu terjadi penggabungan perusahaan tempat A<sub>i </sub>dan B<sub>i</sub> bekerja.</li>
+	<li>Jika P<sub>i</sub> = 2, maka akan diikuti sebuah bilangan bulat C<sub>i</sub>, yang berarti Pak Chanek mencari Friend-Score dari perusahaan tempat C<sub>i</sub> bekerja.</li>
+</ul>
+
+<h3>Format Keluaran</h3>
+
+<p>Untuk setiap tindakan P<sub>i</sub> = 2, keluarkan satu baris berisi sebuah bilangan bulat, Friend-Score dari perusahaan tempat C<sub>i</sub> bekerja.</p>
+
+<h3>Contoh Masukan</h3>
+
+<pre>
+1
+5 3 6
+1 5
+2 4
+2 3
+1 1 4
+2 1
+1 2 3
+2 3
+1 3 1
+2 1
+</pre>
+
+<h3>Contoh Keluaran</h3>
+
+<pre>
+0
+1
+2
+</pre>
+
+<h3>Batasan</h3>
+
+<ul>
+	<li>1 &le; T &le; 8</li>
+	<li>1 &le; N &le; 50.000</li>
+	<li>1 &le; M &le; min(N*(N-1)/2, 50.000)</li>
+	<li>1 &le; Q &le; 50.000</li>
+	<li>1 &le; U<sub>i</sub>, V<sub>i</sub> &le; N, U<sub>i</sub> &ne; V<sub>i</sub></li>
+	<li>Dijamin setiap pertemanan disebutkan tepat sekali</li>
+	<li>1 &le;<sub> </sub>P<sub>i</sub> &le; 2</li>
+	<li>1 &le; A<sub>i</sub>,&nbsp;B<sub>i</sub>, C<sub>i</sub>, &le; N</li>
+	<li>Dijamin ketika penggabungan, perusahaan A<sub>i</sub> berbeda dengan perusahaan B<sub>i</sub></li>
+</ul>
