@@ -25,11 +25,7 @@ long long primPriorityQueue() {
 	// pair<cost,vertex>
 	priority_queue<pii,vector<pii>,greater<pii>> pq;
 
-	// if we change i <= 1 to i <= n
-	// then we will have minimum spanning forest instead
-	for(int i = 1 ; i <= 1 ; i++) {
-		pq.push({INF,i});
-	}
+	pq.push({INF,1});
 
 	long long ans = 0;
 	while(!pq.empty()) {

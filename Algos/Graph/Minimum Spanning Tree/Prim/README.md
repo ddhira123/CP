@@ -6,7 +6,7 @@ Terdapat 2 implementasi untuk algo ini, masing-masing bekerja dalam O((E+V) log 
 
 ## O((E+V) log E)
 
-Algo O((E+V) log E) memanfaatkan priority_queue dengan prioritas cost minimal. Awalnya, buat sebuah dummy edge, dengan cost tak hingga, dan terhubung pada vertex pertama. Perhatikan, seandainya yang ingin dicari adalah Minimum Spanning Forest, kita cukup mengubah sehingga tedapat V buah dummy edge, Kemudian, proses isi priority_queue. Ambil topnya. Ada beberapa kasus:
+Algo O((E+V) log E) memanfaatkan priority_queue dengan prioritas cost minimal. Awalnya, buat sebuah dummy edge, dengan cost tak hingga, dan terhubung pada vertex pertama. Kemudian, proses isi priority_queue. Ambil topnya. Ada beberapa kasus:
 
 - Apabila ternyata vertex sudah diambil, skip.
 - Apabila ternyata cost-nya tak hingga, ubah costnya menjadi 0. Dummy edge ini menandai awal suatu komponen. 
@@ -19,7 +19,7 @@ Buat sebuah array minDist[], dengan minDist[x] adalah cost termurah yang menghub
 
 1. Cari vertex yang belum diambil, dengan minDist[] terkecil.
 2. Seandainya semua vertex sudah diambil, berhenti.
-3. Jika tidak, artinya kita akan mengambil vertex tersebut, sebut saja y. Apabila minDist[y] bernilai tak hingga, berhenti, karena tidak ada vertex yang menghubungkan pada component sekarang ke y. Namun, apabila ingin mencari Minimum Spanning Forest, jangan berhenti, namun ubah minDist[y] menjadi 0.
+3. Jika tidak, artinya kita akan mengambil vertex tersebut, sebut saja y. Apabila minDist[y] bernilai tak hingga, berhenti, karena tidak ada vertex yang menghubungkan pada component sekarang ke y. 
 4. Tambahkan minDist[y] pada total cost dan tandai y sebagai sudah diambil.
 5. Ekspansi y, untuk setiap vertex v, minDist[v]=min(minDist[v],cost[y][v]).
 6. Kembali ke langkah 1.

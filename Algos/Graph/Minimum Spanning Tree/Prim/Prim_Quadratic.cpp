@@ -40,10 +40,8 @@ long long primQuadratic() {
 			}
 		}
 
-		// comment break if you want to find minimum spanning forest
 		if(best == INF) {
 			break;
-			best = 0;
 		}
 
 		ans += best;
