@@ -1,0 +1,177 @@
+            <h3>Deskripsi</h3>
+
+<blockquote>
+<p><em>Apa yang dilakukan pahlawan ketika senggang?</em></p>
+
+<p><em>Tentunya beristirahat, berlatih, dan yang terpenting..</em></p>
+
+<p><em>..bermain.</em></p>
+</blockquote>
+
+<p>Bang baru-baru ini memiliki hobi baru, yaitu bermain domino. Uniknya, permainan domino ini tidak biasa, karena Bang sendiri yang membuatnya. Bang berencana untuk mengajak Saitama dan Genos untuk bermain, sehingga ia sedang berusaha mencari cara menjelaskan aturan permainan domino yang unik ini.</p>
+
+<p>Awalnya, Bang akan mendirikan sejumlah domino di beberapa petak. Misal, petak yang memiliki domino ditulis sebagai 1 dan yang kosong ditulis sebagai 0. Maka, salah satu konfigurasi domino adalah sebagai berikut:</p>
+
+<pre>
+10111001
+^^^^^^^^
+76543210
+</pre>
+
+<p>Angka di bawahnya menunjukkan posisi (perhatikan bahwa posisi dimulai dari kanan!).</p>
+
+<p>Bagaimana cara bermainnya? Selama domino yang masih berdiri lebih dari satu, maka Bang akan melakukan hal-hal berikut:</p>
+
+<ol>
+	<li><span class="_5yl5"><span>Cari posisi terkecil yang terdapat domino</span></span>, misal di i.</li>
+	<li>Jatuhkan domino pada posisi ke-i. Akibat jatuhnya domino pada posisi ke-i, apabila terdapat domino pada posisi ke-(i+1), maka domino tersebut juga jatuh. Hal ini terjadi berantai hingga posisi ke-j, dimana terdapat domino pada posisi ke-j namun tidak ada domino pada posisi ke-(j+1). Domino pada posisi ke-j jatuh, namun tidak menyebabkan apa-apa lagi.</li>
+	<li>Dirikan domino baru di posisi ke-(j+1)</li>
+	<li>Buang semua domino pada posisi ke-i sampai ke-j</li>
+</ol>
+
+<p>Berikut alur permainan untuk konfigurasi 10111001:</p>
+
+<pre>
+10111001 -&gt; 10111010 -&gt; 10111100 -&gt; 11000000 -&gt; 100000000
+</pre>
+
+<p>Bang yang kelelahan menulis konfigurasi yang panjang, menyadari bahwa setiap konfigurasi terlihat seperti bilangan basis 2. Oleh karena itu, Bang lalu mengkodekan setiap konfigurasi ke dalam basis 10. Sebagai contoh, 10111001 akan dikodekan menjadi 2<sup>7</sup>+2<sup>5</sup>+2<sup>4</sup>+2<sup>3</sup>+2<sup>0</sup>= 185.</p>
+
+<p>Bang sekarang mendefinisikan f(x) sebagai banyak iterasi yang dibutuhkan dalam permainan dengan konfigurasi x. Sebagai contoh, f(185) = 4, karena dibutuhkan 4 iterasi hingga permainan berakhir. Bang lalu menulis di kertas beberapa nilai f(x) berikut:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td><strong>x</strong></td>
+			<td>f(x)</td>
+			<td><strong>x</strong></td>
+			<td>f(x)</td>
+			<td><strong>x</strong></td>
+			<td>f(x)</td>
+			<td><strong>x</strong></td>
+			<td>f(x)</td>
+		</tr>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>0</td>
+			<td><strong>6</strong></td>
+			<td>1</td>
+			<td><strong>11</strong></td>
+			<td>2</td>
+			<td><strong>16</strong></td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td><strong>7</strong></td>
+			<td>1</td>
+			<td><strong>12</strong></td>
+			<td>1</td>
+			<td><strong>17</strong></td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>1</td>
+			<td><strong>8</strong></td>
+			<td>0</td>
+			<td><strong>13</strong></td>
+			<td>2</td>
+			<td><strong>18</strong></td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>0</td>
+			<td><strong>9</strong></td>
+			<td>3</td>
+			<td><strong>14</strong></td>
+			<td>1</td>
+			<td><strong>19</strong></td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>2</td>
+			<td><strong>10</strong></td>
+			<td>2</td>
+			<td><strong>15</strong></td>
+			<td>1</td>
+			<td><strong>20</strong></td>
+			<td>2</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Sekarang, Bang justru penasaran akan pertanyaan berikut: Untuk tiga bilangan A, B, dan K, <span class="_5yl5"><span>ada berapa x yang memenuhi A &le; x &le; B dan f(x) = K</span></span>? Berhubung Saitama dan Genos sudah hampir tiba, Bang harus mempersiapkan penjelasan permainan domino tersebut, dan Bang memutuskan untuk meminta bantuan Anda untuk menjawab pertanyaannya tersebut. Bantulah Bang!</p>
+
+<h3>Format Masukan</h3>
+
+<p>Baris pertama berisi sebuah bilangan bulat A yang dinyatakan dalam basis 2.</p>
+
+<p>Baris kedua berisi sebuah bilangan bulat B yang dinyatakan dalam basis 2.</p>
+
+<p>Baris ketiga berisi sebuah bilangan bulat K yang dinyatakan dalam basis 10.</p>
+
+<h3>Format Keluaran</h3>
+
+<p>Satu baris berisi sebuah bilangan bulat yang menyatakan banyaknya x yang memenuhi A &le; x &le; B dan f(x) = K. Karena bilangan ini bisa sangat besar, keluarkan hasilnya modulo 1.000.000.007.</p>
+
+<h3>Contoh Masukan 1</h3>
+
+<pre>
+101
+10100
+2
+</pre>
+
+<h3>Contoh Keluaran 1</h3>
+
+<pre>
+5
+</pre>
+
+<h3>Contoh Masukan 2</h3>
+
+<pre>
+1010
+10001
+3
+</pre>
+
+<h3>Contoh Keluaran 2</h3>
+
+<pre>
+0
+</pre>
+
+<h3>Contoh Masukan 3</h3>
+
+<pre>
+111000111
+1110001111
+4
+</pre>
+
+<h3>Contoh Keluaran 3</h3>
+
+<pre>
+108
+</pre>
+
+<h3>Penjelasan</h3>
+
+<p>Pada contoh masukan 1, A = 5 dan B = 20. Terdapat 5 bilangan x pada interval [5,20] dengan f(x) = 2, yaitu 5, 10, 11, 13, dan 20.</p>
+
+<p>Pada contoh masukan 2, A = 10 dan B = 17. Tidak ada bilangan x pada interval [10,17] dengan f(x) = 3.</p>
+
+<h3>Batasan</h3>
+
+<ul>
+	<li>1 &le; A &le; B &le; 2<sup>2.000</sup></li>
+	<li>0 &le; K &le; 2.000</li>
+	<li><span class="_5yl5"><span>Penulisan basis 2 A dan B dijamin diawali dengan 1</span></span></li>
+</ul>
+
+        
