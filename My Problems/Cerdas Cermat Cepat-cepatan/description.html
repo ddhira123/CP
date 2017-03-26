@@ -1,0 +1,102 @@
+<h3>Deskripsi</h3>
+
+<p><em>&quot;Soal terakhir.&quot;</em></p>
+
+<p><em>*Deg* *Deg*</em></p>
+
+<p><em>&quot;Diberikan sebuah bilangan N, gambarlah pohon faktornya.&quot;</em></p>
+
+<p><em>(Dalam hati) &quot;Wah gampang nih.&quot;</em></p>
+
+<p><em>&quot;Maaf soal diralat. Gambarlah semua pohon faktor berbeda dari N.&quot;</em></p>
+
+<p><em>&quot;Hah!?&quot;</em></p>
+
+<p>Begitulah situasi cerdas cermat tingkat kecamatan yang sedang Irwanto ikuti. Cara menggambar pohon faktor dari sebuah bilangan bulat M didefinisikan sebagai berikut:</p>
+
+<ol>
+	<li>Apabila M bilangan prima, berhenti.</li>
+	<li>Jika tidak, maka cari dua buah bilangan bulat x dan y&nbsp;sehingga 1 &lt; x, y &lt; M dan x * y = M. Selanjutnya, gambar 2 cabang&nbsp;yang berturut-turut berujung di x dan y. Lalu, gambar pohon faktor dari x dan y</li>
+</ol>
+
+<p>Berikut adalah&nbsp;beberapa contoh dari pohon faktor:</p>
+
+<p><img alt="" src="images/contoh-benar.png" style="height:264px; width:281px" /><img alt="" src="images/contoh-sama-1.png" style="height:274px; width:441px" /></p>
+
+<p>Berikut adalah beberapa pohon yang <strong>bukan</strong> merupakan pohon faktor:</p>
+
+<p><img alt="" src="images/contoh-salah-faktor.png" style="height:247px; width:255px" /><img alt="" src="images/contoh-salah-bisa-faktor-lagi.png" style="height:163px; width:200px" /></p>
+
+<p>Pohon kiri salah karena 2*6 adalah 12, bukan 8. Pohon kanan salah karena 4 masih bisa difaktorkan menjadi 2*2.</p>
+
+<p>Selanjutnya, dua gambar pohon faktor&nbsp;A dan B&nbsp;dinyatakan sama jika dan hanya jika terdapat pengubahan urutan cabang-cabang pada B sehingga A dan B menjadi persis sama. Sebagai contoh, dua pohon berikut dikatakan&nbsp;sama:</p>
+
+<p><img alt="" src="images/contoh-sama-1.png" style="height:207px; width:334px" /><img alt="" src="images/contoh-sama-2.png" style="height:214px; width:348px" /></p>
+
+<p>Berikut adalah salah satu cara mengubah pohon di kanan menjadi pohon di kiri:</p>
+
+<p><img alt="" src="images/langkah-1.png" style="height:291px; width:597px" /></p>
+
+<p><img alt="" src="images/langkah-2.png" style="height:297px; width:591px" /></p>
+
+<p><img alt="" src="images/langkah-3.png" style="height:280px; width:404px" /></p>
+
+<p>Percabangan yang urutan cabangnya ditukar ditandai dengan warna biru.</p>
+
+<p>Irwanto merasa bahwa panitia sengaja membuat soal yang tidak mungkin diselesaikan dalam jeda waktu yang sangat singkat. Untuk itu, ia harus membuktikan bahwa banyaknya gambar pohon faktor berbeda cukup besar. Ia memberi kode pada&nbsp; Anda yang sedang menonton cerdas cermat tersebut untuk mencari banyaknya gambar pohon faktor berbeda yang mungkin. Karena Anda akan kesulitan untuk memberi jawaban utuhnya pada Irwanto, Anda memutuskan untuk memberikan banyaknya setelah dimodulo 10<sup>9</sup>+7. Bantulah Irwanto!</p>
+
+<h3>Format Masukan</h3>
+
+<p>Satu baris berisi sebuah bilangan bulat N, bilangan yang ingin diketahui banyak gambar pohon faktor berbedanya.</p>
+
+<h3>Format Keluaran</h3>
+
+<p>Satu baris berisi sebuah bilangan bulat, banyaknya gambar pohon faktor berbeda dari N setelah dimodulo 10<sup>9</sup>+7.</p>
+
+<h3>Contoh Masukan 1</h3>
+
+<pre>
+8
+</pre>
+
+<h3>Contoh Keluaran 1</h3>
+
+<pre>
+1
+</pre>
+
+<h3>Contoh Masukan 2</h3>
+
+<pre>
+30
+</pre>
+
+<h3>Contoh Keluaran 2</h3>
+
+<pre>
+3
+</pre>
+
+<h3>Contoh Masukan 3</h3>
+
+<pre>
+420
+</pre>
+
+<h3>Contoh Keluaran 3</h3>
+
+<pre>
+60
+</pre>
+
+<h3>Penjelasan</h3>
+
+<p>Berikut adalah ketiga pohon faktor berbeda dari 30:</p>
+
+<p><img alt="" src="images/sample-1.png" style="height:235px; width:227px" /><img alt="" src="images/sample-2.png" style="height:247px; width:237px" /><img alt="" src="images/sample-3.png" style="height:241px; width:246px" /></p>
+
+<h3>Batasan</h3>
+
+<ul>
+	<li>2 &le; N &le; 10<sup>9</sup></li>
+</ul>
