@@ -35,7 +35,7 @@ int main() {
 	cin >> tc;
 	while(tc--) {
 		cin >> n >> m >> h;
-		if(n == m) {
+		if(n % m == 0) {
 			cout << "-1\n";
 		}	
 		else if(n > m) {
