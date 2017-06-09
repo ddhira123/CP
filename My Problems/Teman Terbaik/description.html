@@ -1,0 +1,73 @@
+<h3>Deskripsi</h3>
+
+<p>Cak Lontong sedang membutuhkan uang yang cukup banyak karena ia ingin menyiapkan perayaan Lebaran. Karena itu ia berminat untuk&nbsp;mengambil uangnya di ATM.</p>
+
+<p>Terdapat N buah ATM di sepanjang perjalanan dari rumah Cak Lontong ke tempat pertapaannya. Mesin-mesin ATM&nbsp;ini dinomori dari 1 sampai N. Setiap mesin tersebut mempunyai waktu pemrosesan T<sub>i</sub> yang berbeda-beda. Karena Cak Lontong dapat bergerak dengan sangat cepat, waktu yang ia butuhkan untuk berpindah tempat dapat diabaikan.</p>
+
+<p>Cak Lontong&nbsp;mendengar rumor dari temannya, Cak Noris, bahwa&nbsp;belakangan ini terdapat beberapa mesin ATM yang rusak, tetapi ia tidak mengetahui ATM mana saja yang rusak. Kemudian Cak Lontong mendiskusikan strategi pengambilan&nbsp;uang dengan Cak Noris, sehingga diperoleh keputusan berikut:</p>
+
+<ol>
+	<li>Saat Cak Lontong berada pada ATM ke-i, dengan peluang 0.5 ia&nbsp;akan mencoba mengambil uang di ATM tersebut, dan dengan peluang 0.5 sisanya akan melewati ATM ke-i menuju ke pemberhentian berikutnya (ATM ke-(i + 1) jika ada, atau tempat pertapaan jika tidak ada ATM ke-(i + 1)).</li>
+	<li>Jika Cak Lontong menentukan untuk mengambil uang di ATM ke-i, maka ia akan menunggu T<sub>i</sub> satuan waktu dan terdapat dua kemungkinan kejadian, yaitu:
+	<ol>
+		<li>Jika uang keluar, misi pengambilan uang Cak Lontong selesai, ia akan segera pergi ke tempat pertapaannya.</li>
+		<li>Jika uang tidak keluar, Cak Lontong akan menuju ke pemberhentian berikutnya.</li>
+	</ol>
+	</li>
+	<li>Jika sampai akhir Cak Lontong tidak mendapatkan uangnya, ia akan mengikhlaskannya dan pergi bertapa.</li>
+</ol>
+
+<p>Ternyata Cak Noris mempunyai rencana di balik penyebaran rumor itu. Cak Noris berniat menjahili Cak Lontong dengan menyebarkan rumor tersebut, padahal ia sendiri yang akan merusak beberapa ATM agar Cak Lontong menderita. Untungnya Cak Noris masih cukup manusiawi. Oleh karena itu,&nbsp;Cak Noris meminta&nbsp;Anda untuk menghitung berapa nilai harapan dari lama waktu Cak Lontong mengambil uang di ATM-ATM tersebut dengan diberikannya konfigurasi perusakan ATM yang direncanakannya. Cak Noris akan memberikan Anda&nbsp;N buah nilai B<sub>i</sub>&nbsp;yang menyatakan apakah ATM ke-i akan dirusak.</p>
+
+<h3>Format Masukan</h3>
+
+<p>Baris pertama berisi sebuah bilangan bulat N yang menyatakan banyaknya ATM.</p>
+
+<p>N baris berikutnya masing-masing berisi tepat dua buah bilangan bulat, T<sub>i</sub> dan B<sub>i</sub>, yang secara berurutan menyatakan lama waktu pemrosesan ATM ke-i dan apakah ATM ke-i akan dirusak Cak Noris atau tidak. B<sub>i</sub> akan bernilai 0 jika Cak Noris berencana merusak ATM ke-i, dan akan bernilai 1 jika tidak.</p>
+
+<h3>Format Keluaran</h3>
+
+<p>Keluarkan sebuah bilangan dalam satu baris yang menyatakan nilai harapan dari lama waktu Cak Lontong mengambil uang di ATM dengan konfigurasi perusakan yang direncanakan oleh Cak Noris. Jawaban akan dianggap benar jika nilai mutlak dari selisih&nbsp;jawaban peserta dengan jawaban juri kurang dari 10<sup>-4</sup>.</p>
+
+<h3>Contoh Masukan</h3>
+
+<pre>
+3
+4 0
+6 1
+5 1
+</pre>
+
+<h3>Contoh Keluaran</h3>
+
+<pre>
+6.250000</pre>
+
+<h3>Penjelasan</h3>
+
+<p>Terdapat 3 buah ATM, ATM pertama&nbsp;dengan nilai T<sub>1</sub> = 4 akan dirusak Cak Noris.</p>
+
+<p>Terdapat 6&nbsp;kemungkinan kasus, yaitu:</p>
+
+<ol>
+	<li>Cak Lontong mencoba mengambil uang di ATM pertama tanpa hasil, kemudian mencoba mengambil uang di ATM kedua. Lama waktu yang dibutuhkan adalah 4 + 6 = 10 satuan waktu, dengan peluang 0.25.</li>
+	<li>Cak Lontong mencoba mengambil uang di ATM pertama tanpa hasil, kemudian melewati ATM kedua dan mencoba mengambil uang di ATM ketiga. Lama waktu yang dibutuhkan adalah 4 + 5 = 9 satuan waktu, dengan peluang 0.125.</li>
+	<li>Cak Lontong mencoba mengambil uang di ATM pertama tanpa hasil, kemudian melewati ATM kedua dan ketiga, sehingga total waktu yang dibutuhkan adalah 4 satuan waktu dengan peluang 0.125.</li>
+	<li>Cak Lontong melewati ATM pertama, kemudian mencoba mengambil uang di ATM kedua. Total waktu yang dibutuhkan adalah 6 satuan waktu dengan peluang 0.25.</li>
+	<li>Cak Lontong melewati ATM pertama dan kedua, dan mencoba mengambil uang di ATM ketiga. Total waktu yang dibutuhkan adalah 5 satuan waktu dengan peluang 0.125.</li>
+	<li>Cak Lontong melewati ATM pertama, kedua, dan ketiga, sehingga total waktu yang dibutuhkan adalah 0 satuan waktu dengan peluang 0.125.</li>
+</ol>
+
+<p>Jika dijumlahkan, diperoleh 10 (0.25) + 9 (0.125) + 4 (0.125) + 6 (0.25) + 5 (0.125) + 0 (0.125) = 6.25.</p>
+
+<h3>Catatan</h3>
+
+<p>Nilai harapan dari N buah kejadian dengan peluang masing-masing kejadian P<sub>1</sub>, P<sub>2</sub>, .., P<sub>N</sub>, dengan nilai masing-masing kejadian&nbsp;V<sub>1</sub>, V<sub>2</sub>, .., V<sub>N</sub> adalah (P<sub>1</sub>V<sub>1</sub> + P<sub>2</sub>V<sub>2</sub> + .. + P<sub>N</sub>V<sub>N</sub>).</p>
+
+<h3>Batasan</h3>
+
+<ul>
+	<li>1 &le; N &le; 100.000</li>
+	<li>1&nbsp;&le; T<sub>i</sub>&nbsp;&le; 10<sup>9</sup></li>
+	<li>0&nbsp;&le; B<sub>i</sub>&nbsp;&le; 1</li>
+</ul>

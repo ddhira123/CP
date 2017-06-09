@@ -1,0 +1,87 @@
+<h3>Deskripsi</h3>
+
+<blockquote>
+<p><em>Baik, tiga mendatar. Ada enam huruf, huruf pertama C.</em></p>
+
+<p>SEMUA COWOK PASTI KELEPEK-KELEPEK SAMA CEWEK YANG<br />
+<strong>C _ _ _ _ _</strong></p>
+
+<p>Cantik!<br />
+SALAH!</p>
+
+<p>Cerdas!<br />
+SALAH!</p>
+
+<p>Jawaban yang betul adalah:</p>
+
+<p><em>SEMUA COWOK PASTI KELEPEK-KELEPEK SAMA CEWEK YANG</em><br />
+<strong><em>C O D I N G</em></strong></p>
+</blockquote>
+
+<p>Mungkin beberapa dari Anda sudah tahu teka-teki <em>nyeleneh</em> Cak Lontong seperti teka-teki tersebut. Karena sekarang sudah memasuki bulan puasa, maka Cak Lontong ingin memberikan teka-teki sedemikian rupa sehingga tidak ada peserta yang menjadi emosi (karena <em>nyeleneh</em> tersebut).</p>
+
+<p>Cak Lontong mengetahui bahwa jawaban dari sebuah teka-tekinya adalah <em>string</em> S. Anda akan diberikan sebuah <em>string</em> S&#39; yang karakter-karakternya terdiri dari huruf kecil, namun bisa jadi beberapa karakter tersebut bukanlah huruf kecil melainkan berupa garis bawah (_). Setiap garis bawah masing-masing mewakili sebuah huruf kecil. Anda diminta untuk mencari tahu <em>string</em> jawaban S dari <em>string</em> S&#39; tersebut. Cak Lontong juga memberikan sebuah bilangan bulat K. Cak Lontong kemudian memberikan petunjuk berikut:</p>
+
+<p>Apabila Anda mengurutkan seluruh kemungkinan string yang mungkin dibentuk dari <em>string</em> S&#39; secara leksikografis, maka <em>string</em> jawaban S berada di urutan ke-K.</p>
+
+<p>Dapatkah Anda menemukan <em>string</em> jawaban S dari petunjuk yang diberikan Cak Lontong?</p>
+
+<h3>Format Masukan</h3>
+
+<p>Baris pertama berisi sebuah <em>string</em> S&#39;.</p>
+
+<p>Baris kedua berisi sebuah bilangan bulat K.</p>
+
+<h3>Format Keluaran</h3>
+
+<p>Keluarkan sebuah baris berisi <em>string</em> S dari petunjuk yang diberikan Cak Lontong.</p>
+
+<h3>Contoh Masukan 1</h3>
+
+<pre>
+caklon_ong
+10
+</pre>
+
+<h3>Contoh Keluaran 1</h3>
+
+<pre>
+caklonjong</pre>
+
+<h3>Contoh Masukan 2</h3>
+
+<pre>
+c_____
+6456145
+</pre>
+
+<h3>Contoh Keluaran 2</h3>
+
+<pre>
+coding
+</pre>
+
+<h3>Penjelasan</h3>
+
+<p>Pada contoh 1, terdapat 26 kemungkinan jawaban yang apabila diurutkan secara leksikografis adalah:</p>
+
+<ul>
+	<li>&quot;caklonaong&quot;</li>
+	<li>&quot;caklonbong&quot;</li>
+	<li>&quot;cakloncong&quot;</li>
+	<li>...</li>
+	<li>&quot;caklonyong&quot;</li>
+	<li>&quot;caklonzong&quot;</li>
+</ul>
+
+<p><em>String</em> S adalah <em>string</em> pada urutan ke-10 yakni &quot;caklonjong&quot;.</p>
+
+<h3>Batasan</h3>
+
+<ul>
+	<li>1 &le; |S&#39;| &le; 100</li>
+	<li>1 &le; K &le; 26<sup>5</sup></li>
+	<li>Banyaknya karakter garis bawah pada S&#39; antara 0 hingga 5 inklusif</li>
+	<li>Karakter-karakter pada S&#39; hanya terdiri dari huruf kecil atau garis bawah</li>
+	<li>Nilai K dijamin tidak lebih dari banyaknya kemungkinan jawaban (dengan kata lain, selalu ada jawaban)</li>
+</ul>
