@@ -1,0 +1,86 @@
+Makan Malam Chanek
+
+[Deskripsi]
+
+Pak Chanek baru saja mulai mempelajari Competitive Programming. Memang susah pada awalnya. Sampai-sampai, ia harus bertapa di puncak gunung sambil berpuasa 3 hari 3 malam. Apakah setelah turun dari puncak gunung Pak Chanek langsung jago? Tentu saja tidak! Karena di puncak gunung tidak terdapat koneksi internet dan Pak Chanek pun tidak bisa latihan di sana. Tetapi Pak Chanek tidak menyerah. Ia tetap berlatih keras.
+
+Enam bulan berlalu. Akhirnya Pak Chanek memutuskan untuk mengikuti kompetisi pertamanya. Seperti apa yang telah dipikirkan sebelumnya, Pak Chanek gagal memenangkan kompetisi tersebut. Namun, ternyata Pak Chanek mendapat sebuah hadiah hiburan, yaitu paket makan malam untuk dua orang. Sebagai rasa terima kasihnya kepada temannya Dzul yang telah mengajarinya Competitive Programming sebelum pertapaannya, Pak Chanek memilihnya sebagai orang yang ia ajak makan malam.
+
+Pak Chanek dan Dzul duduk berhadapan di meja bundar dengan M makanan. Uniknya, banyak makanan di restoran ini pasti genap. Makanan dinomori dari 0 sampai M - 1 terurut searah jarum jam dengan makanan 0 berada tepat di depan Pak Chanek dan makanan M / 2 berada tepat di depan Dzul. Untuk mengambil suatu jenis makanan, Pak Chanek atau Dzul harus memutar meja hingga makanan yang ingin diambil berada tepat di depan mereka. Putaran bisa dilakukan searah atau berlawanan arah jarum jam. Misal makanan di depan Pak Chanek adalah makanan x (yang berarti makanan di depan Dzul adalah makanan (x + M / 2) mod M). Maka, setelah sekali putaran, makanan di depan Pak Chanek berubah menjadi x', yang bisa bernilai x + 1 (0 apabila x = M - 1) atau x - 1 (M - 1 apabila x = 0). Tentunya, setelah perputaran makanan di depan Dzul adalah makanan (x' + M / 2) mod M. Sebagai catatan, 1 putaran, ke manapun arahnya, membutuhkan waktu 1 detik.
+
+Pak Chanek dan Dzul masing-masing memiliki urutan N makanan yang ingin mereka makan. Bisa saja suatu makanan muncul dalam urutan tersebut lebih dari sekali. Anggap saja waktu yang diperlukan untuk mengambil dan memakan suatu makanan 0 detik. Tentukan waktu minimum agar Pak Chanek dan Dzul dapat mengambil dan memakan makanan-makanan yang mereka inginkan!
+
+[Format Masukan]
+
+Baris pertama berisi 2 bilangan yaitu M dan N. M menandakan berapa banyak jenis makanan yang ada di meja, dan N menandakan banyak makanan yang ingin dimakan oleh Pak Chanek dan Dzul.
+
+Baris kedua berisi N bilangan A_i yang menyatakan makanan ke-i yang ingin dimakan oleh Pak Chanek.
+
+Baris kedua berisi N bilangan B_i yang menyatakan makanan ke-i yang ingin dimakan oleh Dzul.
+
+[Format Keluaran]
+
+Keluarkan sebuah baris berisi sebuah bilangan bulat, waktu minimum yang dibutuhkan.
+
+[Contoh Masukan 1]
+
+4 3
+3 0 1
+0 3 2
+
+[Contoh Keluaran 1]
+
+5
+
+[Contoh Masukan 2]
+
+10 5
+7 8 7 3 6
+2 3 0 5 0
+
+
+[Contoh Keluaran 2]
+
+17
+
+[Penjelasan]
+
+Pada contoh masukan pertama, awalnya Pak Chanek menghadap makanan 0 dan Dzul menghadap makanan 2. Waktu minimum (5 detik) dapat dicapai dengan cara berikut:
+
+	1. Putar searah jarum jam, sehingga Pak Chanek menghadap makanan 3 dan Dzul menghadap makanan 1. Pak Chanek bisa memakan makanan ke-1 yang ia inginkan.
+	2. Putar searah jarum jam, sehingga Pak Chanek menghadap makanan 2 dan Dzul menghadap makanan 0. Dzul bisa memakan makanan ke-1 yang ia inginkan.
+	3. Putar searah jarum jam, sehingga Pak Chanek menghadap makanan 1 dan Dzul menghadap makanan 3. Dzul bisa memakan makanan ke-2 yang ia inginkan.
+	4. Putar searah jarum jam, sehingga Pak Chanek menghadap makanan 0 dan Dzul menghadap makanan 2. Pak Chanek bisa memakan makanan ke-2 yang ia inginkan, dan Dzul dapat memakan makanan ke-3 yang ia inginkan.
+	5. Putar berlawanan arah jarum jam, sehingga Pak Chanek menghadap makanan 1 dan Dzul menghadap makanan 3. Pak Chanek bisa memakan makanan ke-3 yang ia inginkan.
+
+[Subsoal]
+
+Untuk semua subsoal berlaku:
+
+- 2 ≤ M ≤ 100.000
+- M mod 2 = 0
+- 1 ≤ N ≤ 2.000
+- 0 ≤ A_i < M
+- 0 ≤ B_i < M
+
+Subsoal 1 (20 poin)
+
+- 2 ≤ M ≤ 4
+- 1 ≤ N ≤ 4
+
+Subsoal 2 (25 poin)
+
+- 2 ≤ M ≤ 200
+- 1 ≤ N ≤ 200
+
+Subsoal 3 (12 poin)
+
+- A_i = 0
+
+Subsoal 4 (14 poin)
+
+- A_i = A_j untuk setiap i < j
+
+Subsoal 5 (29 poin)
+
+- Tidak ada batasan khusus

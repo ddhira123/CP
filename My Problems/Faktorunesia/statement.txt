@@ -1,0 +1,92 @@
+Faktorunesia
+
+[Deskripsi]
+
+Pak Chanek sedang berlibur di Negara Faktorunesia. Terdapat N kota di Faktorunesia serta M buah jalan dua arah yang menghubungkan dua kota berbeda. Jalan ke-i menghubungkan kota ke-U_i dan kota ke-V_i, serta memiliki suatu nilai C_i. Pak Chanek baru saja mendarat di kota ke-1, dan ingin pergi ke kota ke-N dengan menggunakan jalan-jalan yang ada.
+
+Suatu rute perjalanan memiliki aturan yang cukup aneh di Faktorunesia. Misal suatu rute perjalanan berturut-turut menggunakan jalan ke-e_1, jalan ke-e_2, dan seterusnya, hingga jalan ke-e_k. Maka:
+
+	- Untuk setiap i (1 ≤ i ≤ k), berlaku C_e_i < i (nilai jalan yang dipakai ke-i harus lebih kecil dari i)
+	- Panjang dari rute perjalanan tersebut adalah C_e_1 * 1! + C_e_2 * 2! + ... + C_e_k * k!
+
+Sekarang, Pak Chanek penasaran, apakah ada rute perjalanan yang berawal dari kota ke-1 dan berakhir di kota ke-N, dan jika ada, berapakah panjang minimum rute perjalanan tersebut? Keluarkan jawabannya setelah dimodulo 10^9+7.
+
+[Format Masukan]
+
+Baris pertama berisi dua buah bilangan bulat N dan M, masing-masing menyatakan banyak kota dan banyak jalan di Faktorunesia.
+M baris selanjutnya berisi U_i, V_i, dan C_i, yang menyatakan jalan ke-i menghubungkan kota ke-U_i dan kota ke-V_i, serta memiliki nilai C_i.
+
+[Format Keluaran]
+
+Keluarkan satu baris berisi sebuah bilangan bulat yang menyatakan panjang rute perjalanan minimum, atau -1 apabila tidak ada rute perjalanan yang berawal dari kota ke-1 dan berakhir di kota ke-N.
+
+[Contoh Masukan 1]
+
+3 2
+1 2 0
+2 3 2
+
+[Contoh Keluaran 1]
+
+48
+
+[Contoh Masukan 2]
+
+3 2
+1 2 2
+2 3 0
+
+[Contoh Keluaran 2]
+
+-1
+
+[Penjelasan Contoh]
+
+Pada contoh masukan pertama, rute perjalanan terpendek adalah sebagai berikut:
+
+	1. Gunakan jalan ke-1, sehingga sekarang Pak Chanek berada di kota ke-2.
+	2. Gunakan jalan ke-1, sehingga sekarang Pak Chanek berada di kota ke-1.
+	3. Gunakan jalan ke-1, sehingga sekarang Pak Chanek berada di kota ke-2.
+	4. Gunakan jalan ke-2, sehingga sekarang Pak Chanek berada di kota ke-3.
+
+Panjang rute perjalanan tersebut adalah 0 * 1! + 0 * 2! + 0 * 3! + 2 * 4! = 48.
+
+Pada contoh masukan kedua, tidak ada rute perjalanan yang berawal dari kota ke-1 dan berakhir di kota ke-N.
+
+[Subsoal]
+
+Untuk semua subsoal, berlaku:
+
+- 2 ≤ N ≤ 2.000
+- 1 ≤ M ≤ 4.000
+- 1 ≤ U_i, V_i ≤ N
+- U_i ≠ V_i untuk setiap 1 ≤ i ≤ M
+- 0 ≤ C_i ≤ 2.000
+
+Subsoal 1 (14 poin)
+
+- 2 ≤ N ≤ 5
+- 1 ≤ M ≤ 5
+- 0 ≤ C_i ≤ 5
+
+Subsoal 2 (22 poin)
+
+- 2 ≤ N ≤ 100
+- 1 ≤ M ≤ 200
+- 0 ≤ C_i ≤ 100
+
+Subsoal 3 (17 poin)
+
+- C_i = 0
+
+Subsoal 4 (26 poin)
+
+- 0 ≤ C_i ≤ 1
+
+Subsoal 5 (21 poin)
+
+- Tidak ada batasan khusus
+
+[Catatan]
+
+x! menyatakan x faktorial, yang dapat dihitung sebagai x * (x-1) * ... * 2 * 1.

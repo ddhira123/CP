@@ -1,0 +1,59 @@
+Kucing Warna-Warni
+
+[Deskripsi]
+
+Pak Chanek sedang ingin memelihara kucing. Oleh karena itu, Pak Chanek membangun N kandang di halaman rumahnya. Kandang-kandang tersebut dinomori dari 1 sampai N, dengan kandang terkiri adalah kandang pertama dan kandang terkanan adalah kandang ke-N.
+
+Lucunya, Pak Chanek lupa membeli kucing yang akan tinggal di kandang-kandang tersebut! Pak Chanek ingin agar satu kandang ditinggali oleh tepat satu kucing. Oleh karena itu, Pak Chanek lalu pergi ke pet shop untuk membeli kucing. Ternyata, di pet shop tersebut terdapat M jenis kucing, yang mana untuk setiap jenis terdapat 10^9 kucing dengan jenis tersebut. Uniknya, perbedaan di tiap jenis hanya berada pada warnanya. Jenis-jenis kucing dinyatakan dengan suatu bilangan bulat yang berada di antara 1 sampai M.
+
+Pak Chanek tidak ingin memiliki halaman rumah yang biasa saja. Pak Chanek mendefinisikan suatu pasangan bilangan bulat (i, j) (1 ≤ i ≤ j ≤ N) sebagai pasangan yang indah apabila jenis kucing yang tinggal pada kandang ke-i, ke-(i+1), dan seterusnya hingga kandang ke-j berbeda satu sama lain. Pak Chanek lalu menetapkan suatu bilangan bulat K. Sekarang, Pak Chanek ingin mencari pembelian dan penempatan kucing, sehingga terdapat tepat K buah pasangan yang indah.
+
+Pak Chanek lalu meminta bantuanmu untuk mencari pembelian dan penempatan kucing sesuai yang ia inginkan. Bantulah Pak Chanek!
+
+[Format Masukan]
+
+Baris pertama berisi sebuah bilangan bulat T yang menyatakan banyak kasus uji. Setiap kasus uji akan dinyatakan sebagai berikut.
+Baris pertama berisi tiga buah bilangan N, M, dan K, masing-masing menyatakan banyak kandang, banyak jenis kucing, dan banyak pasangan yang indah yang diinginkan Pak Chanek.
+
+[Format Keluaran]
+
+Untuk setiap kasus uji, keluarkan satu baris berisi N buah bilangan bulat, yang menyatakan pembelian dan penempatan kucing yang mungkin. Bilangan ke-i menyatakan jenis kucing yang tinggal di kandang ke-i. Apabila terdapat lebih dari satu kemungkinan jawaban, keluarkan yang mana saja. Apabila tidak terdapat pembelian dan penempatan kucing yang memenuhi, N bilangan bulat ini berupa -1.
+
+[Contoh Masukan]
+
+3
+3 2 5
+3 3 3
+3 2 6
+
+[Contoh Keluaran]
+
+1 2 1
+3 3 3
+-1 -1 -1
+
+[Penjelasan]
+
+Pada kasus uji pertama, terdapat tepat 5 pasangan yang indah, yaitu:
+
+	1. (1, 1)
+	2. (1, 2)
+	3. (2, 2)
+	4. (2, 3)
+	5. (3, 3)
+
+Perhatikan bahwa (1, 3) bukan pasangan yang indah, karena jenis kucing pada kandang pertama sama dengan jenis kucing pada kandang ketiga, yaitu 1. Selain itu, 2 1 2 juga merupakan pembelian dan penempatan yang mungkin.
+
+Pada kasus uji kedua, terdapat 2 pembelian dan penempatan lain yang mungkin, yaitu:
+
+	1. 1 1 1
+	2. 2 2 2
+
+Pada kasus uji ketiga, tidak terdapat pembelian dan penempatan yang mungkin.
+
+[Batasan]
+
+- 1 ≤ T ≤ 10
+- 1 ≤ N ≤ 50.000
+- 1 ≤ M ≤ 50.000
+- 1 ≤ K ≤ 10^9

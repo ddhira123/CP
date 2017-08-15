@@ -1,0 +1,69 @@
+Mencari Waifu
+
+[Deskripsi]
+
+Ayaze, seorang mahasiswa yang pintar sedang bermimpi indah di suatu malam sebelum ujian Struktur Data dan Algoritma. Pada mimpinya, Ayaze berada dalam dunia yang mana terdapat N + 1 istri-istri dua dimensi khayalan Ayaze yang disebut 'waifu'. Waifu-waifu tersebut tersebar dalam dunia dua dimensi yang mana sistem koordinat yang digunakan adalah koordinat kartesius. Di dunia tersebut, Ayaze diberikan suatu daftar koordinat dari setiap posisi waifu-waifunya. Perlu diketahui, koordinat posisi suatu waifu bisa sama dengan waifu lainnya, karena dunia tersebut adalah dunia mimpi. Ayaze pun langsung berlari, berusaha untuk bertemu dengan semua waifunya. Namun, malang nasib Ayaze. Setelah ia bertemu dengan N waifunya, mimpinya berubah menjadi mimpi sangat buruk karena ia bertemu dengan temannya yang bernama Imhaf.
+
+Ayaze langsung terbangun dari mimpinya dalam keadaan syok. Ayaze langsung berusaha mengingat-ingat letak koordinat dari setiap waifu yang ada pada dunia mimpi tersebut, dengan harapan ia akan mendapatkan mimpi yang sama. Dia hanya mengingat:
+
+    - Seluruh koordinat posisi waifu berada pada koordinat (x,y) dengan 0 ≤ x, y ≤ 2.000
+    - Koordinat posisi dari semua waifu yang sempat ditemuinya
+
+Semua koordinat berhasil dicatatnya kecuali satu, yaitu waifu yang belum sempat ditemuinya. Namun, Ayaze ingat bahwa jumlahan dari jarak Manhattan untuk setiap pasang titik koordinat posisi waifu-waifunya adalah K. Ayaze meminta bantuan Anda sebagai peserta penyisihan SCPC Compfest 9 untuk mencari koordinat posisi waifu tersebut berdasarkan koordinat posisi N waifu yang berhasil dicatat dan nilai K. Bantulah Ayaze!
+
+[Format Masukan]
+
+Baris pertama berisi sebuah bilangan bulat T yang menyatakan banyak kasus uji. Setiap kasus uji akan dinyatakan sebagai berikut.
+Baris pertama berisi dua buah bilangan bulat N dan K, masing-masing menyatakan banyak waifu yang koordinatnya berhasil Ayaze catat dan jumlah jarak Manhattan setiap pasang titik koordinat posisi waifu-waifunya.
+N baris berikutnya berisi X_i dan Y_i, yaitu koordinat posisi waifu ke-i yang berhasil dicatat Ayaze.
+
+
+[Format Keluaran]
+
+Untuk setiap kasus uji, keluarkan satu baris berisi dua buah bilangan bulat x dan y, yaitu koordinat posisi waifu yang belum dicatat Ayaze.
+Posisi x dan y dari koordinat harus berada dalam rentang [0, 2000]. Apabila terdapat lebih dari satu jawaban, keluarkan yang mana saja. Apabila tidak ada jawaban yang memungkinkan (mungkin saja ia salah hitung), keluarkan "-1 -1" (tanpa tanda kutip).
+
+
+[Contoh Masukan]
+
+2
+3 16
+1 1 
+3 1
+3 3
+3 2
+1 1 
+3 1
+3 3
+
+
+[Contoh Keluaran]
+
+1 3
+-1 -1
+
+[Penjelasan]
+
+Untuk kasus uji pertama, berikut adalah gambar dari koordinat posisi waifu-waifu yang tercatat:
+{ans1.jpg}
+
+Salah satu koordinat posisi yang memungkinkan agar jumlahan jarak Manhattan terpenuhi adalah titik (1,3) atau titik ANS pada gambar. Selain itu, (2,0) dan (4,2) juga merupakan posisi yang mungkin.
+
+Untuk kasus uji kedua, tidak ada titik yang memungkinkan sehingga jumlahan jarak Manhattan adalah 2.
+
+
+[Batasan]
+
+- 1 ≤ T ≤ 10
+- 1 ≤ N ≤ 50.000
+- 0 ≤ K ≤ 10^12
+- 0 ≤ X_i ≤ 2.000
+- 0 ≤ Y_i ≤ 2.000
+
+[Catatan]
+
+Jarak Manhattan dari dua buah titik koordinat (x_1, y_1) dan (x_2, y_2) adalah (|x_2 - x_1| + |y_2 - y_1|).
+
+[Saran]
+
+Dalam mencari istri, carilah istri tiga dimensi.

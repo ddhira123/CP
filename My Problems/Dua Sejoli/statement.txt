@@ -1,0 +1,62 @@
+Dua Sejoli
+
+[Deskripsi]
+
+Pak Chanek sedang patah hati karena ditinggal pasangannya. Karena ia sangat menderita, ia merasa bahwa semua pasangan tidak boleh bersatu. Pada acara Komunitas Pasangan Erat Sekali, atau KomPES, ia ingin menutup jalan sedemikian sehingga suatu pasangan tidak akan dapat bertemu.
+
+Acara KomPES terdiri dari N tempat pertemuan dan N jalan dua arah yang menghubungkan dua tempat pertemuan yang berbeda. Dipastikan terdapat setidaknya satu rute dari satu tempat pertemuan ke tempat pertemuan lainnya.
+
+Pak Chanek tidak ingin supaya rencananya diketahui, jadi ia ingin supaya banyak jalan yang ditutup seminimum mungkin. Ia juga ingin menyiapkan beberapa rencana penutupan jalan sebagai cadangan. Tetapi, Pak Chanek kesulitan menyiapkan rencana-rencananya. Oleh karena itu, ia meminta Anda untuk membantunya.
+
+Pak Chanek akan memberikan Q pertanyaan. Untuk setiap pertanyaan, Pak Chanek ingin tahu berapa minimum jalan yang harus ditutup untuk memisahkan pasangan dengan laki-laki berada di tempat pertemuan ke-X_j dan perempuan berada di tempat pertemuan ke-Y_j, serta banyaknya cara untuk melakukan hal tersebut. Suatu pasangan dikatakan terpisah apabila dari tempat pertemuannya, laki-laki tidak dapat ke tempat pertemuan tempat perempuan berada dengan menggunakan jalan-jalan yang tidak ditutup. Dua cara dikatakan berbeda apabila terdapat jalan yang ditutup pada salah satu cara, namun tidak pada cara lainnya. Pak Chanek tidak tahu paling banyak ada berapa cara yang mungkin, sehingga ia ingin agar Anda menghitungnya dalam modulo 10^9+7 saja.
+
+Pak Chanek ingin agar pertanyaannya dijawab secepat mungkin. Jawablah pertanyaan Pak Chanek!
+
+[Format Masukan]
+
+Baris pertama berisi sebuah bilangan bulat T yang menyatakan banyak kasus uji. Setiap kasus uji akan dinyatakan sebagai berikut.
+
+Baris pertama berisi sebuah bilangan bulat N, banyak tempat pertemuan dan jalan pada acara KomPES.
+N baris berikutnya masing-masing berisi dua bilangan bulat U_i dan V_i, yang menyatakan bahwa terdapat jalan yang menghubungkan tempat pertemuan ke-U_i dan tempat pertemuan ke-V_i.
+Baris berikutnya berisi sebuah bilangan bulat Q, banyak pertanyaan yang diberikan Pak Chanek.
+Q baris berikutnya masing-masing berisi dua bilangan bulat X_j dan Y_j, posisi laki-laki dan posisi perempuan pada pertanyaan ke-j.
+
+[Format Keluaran]
+
+Untuk setiap kasus uji, keluarkan Q baris masing-masing berisi dua bilangan bulat, jawaban dari pertanyaan yang diberikan, dengan banyak cara dalam modulo 10^9+7.
+
+[Contoh Masukan]
+
+1
+5
+1 2
+2 3
+3 1
+2 4
+3 5
+2
+1 3
+4 5
+
+[Contoh Keluaran]
+
+2 2
+1 2
+
+[Penjelasan]
+
+Pada pertanyaan pertama, Pak Chanek dapat menutup jalan-jalan sebagai berikut:
+
+    1. jalan pertama dan jalan ketiga
+    2. jalan kedua dan jalan ketiga
+
+Perhatikan bahwa tidak mungkin memisahkan pasangan tersebut dengan hanya menutup 0 atau 1 jalan.
+
+[Batasan]
+
+- 1 ≤ T ≤ 10
+- 2 ≤ N ≤ 50.000
+- 2 ≤ Q ≤ 50.000
+- 1 ≤ U_i, V_i ≤ N
+- 1 ≤ X_j, Y_j ≤ N
+- X_j ≠ Y_j untuk setiap 1 ≤ j ≤ Q
