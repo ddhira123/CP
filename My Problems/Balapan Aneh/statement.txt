@@ -1,0 +1,74 @@
+Balapan Aneh
+
+[Deskripsi]
+
+Setiap bulan di Kota Buschet selalu diadakan balapan. Bagi beberapa orang, balapan ini akan terlihat aneh karena setiap peserta akan memulai balapan dari rumahnya masing-masing, dan garis finish balapan berada di rumah yang memiliki nomor paling besar.
+
+Terdapat N rumah di Kota Buschet yang dinomori dari 1 sampai dengan N. Terdapat pula M jalan dua arah, dengan jalan ke-i menghubungkan rumah dengan nomor U_i dan rumah dengan nomor V_i. Setiap jalan berjarak 1 satuan panjang. Jika seseorang ingin mengikuti balapan ini, ia harus membayar sebesar f(t) = a * t^2 + b * t + c, dengan t menyatakan panjang lintasan yang akan ditempuh oleh peserta untuk menyelesaikan lomba. Dalam hal ini, panjang lintasan yang ditempuh sama dengan banyaknya jalan yang ia tempuh. Nilai f(t) bisa saja negatif (dalam hal ini, pemerintah justru membayar mereka). Seseorang diperbolehkan melewati jalan yang sama berkali-kali. Apabila seseorang sudah sampai di rumah nomor N, ia boleh melanjutkan maupun mengakhiri perjalanannya. Setiap peserta memiliki nilai a, b, dan c-nya masing-masing.
+
+Pemerintah Kota Buschet ingin mengetahui berapa biaya yang harus dibayar oleh setiap peserta. Untuk mempermudah penghitungan, Anda sebagai seorang programmer handal diminta untuk membantu Pemerintah Kota Buschet dalam menentukan biaya minimum yang harus dibayar oleh setiap peserta.
+
+[Format Masukan]
+
+Baris pertama berisi tiga buah bilangan bulat N, M, dan K, yang mana N menyatakan banyaknya rumah, M menyatakan banyaknya jalan, dan K menyatakan banyaknya jumlah peserta yang mengikuti balapan.
+M baris berikutnya berisi dua buah bilangan bulat U_i dan V_i, yang berarti jalan ke-i menghubungkan rumah U_i dan V_i.
+K baris selanjutnya berisi empat buah bilangan bulat P_i, a_i, b_i, dan c_i, yang mana P_i menyatakan nomor rumah peserta ke-i, sedangkan a_i, b_i, dan c_i menyatakan variabel dalam penghitungan biaya yang harus dibayar peserta ke-i.
+
+[Format Keluaran]
+
+Keluarkan K baris berisi sebuah bilangan bulat, biaya minimum yang harus dibayar oleh setiap peserta.
+
+[Contoh Masukan 1]
+
+4 4 2
+1 2
+1 3
+2 3
+2 4
+3 1 3 8
+1 1 -10 9
+
+[Contoh Keluaran 1]
+
+18
+-16
+
+[Penjelasan]
+
+Peserta pertama dapat menempuh rute 3-2-4. Akibatnya, t = 2 dan f(t) = 1 * 2^2 + 3 * 2 + 8 = 18. Tidak ada biaya yang lebih kecil yang dapat dicapai peserta pertama.
+
+Peserta kedua dapat menempuh rute 1-3-2-1-2-4. Akibatnya, t = 5, dan f(t) = 1 * 5^2 - 10 * 5 + 9 = -16. Tidak ada biaya yang lebih kecil yang dapat dicapai peserta kedua.
+
+[Subsoal]
+
+Untuk semua subsoal, berlaku:
+
+- 2 ≤ N ≤ 50.000
+- N-1 ≤ M ≤ 100.000
+- 1 ≤ K ≤ 10.000
+- 1 ≤ U_i, V_i ≤ N
+- U_i ≠ V_i untuk setiap 1 ≤ i ≤ M
+- Dijamin setiap peserta dapat mencapai rumah bernomor N
+- 1 ≤ P_i ≤ N
+- 1 ≤ a_i ≤ 10^6
+- -10^6 ≤ b_i ≤ 10^6
+- -10^6 ≤ c_i ≤ 10^6
+
+Subsoal 1 (20 Poin)
+
+- 2 ≤ N ≤ 100
+- N-1 ≤ M ≤ 200
+- 1 ≤ a_i ≤ 50
+- -50 ≤ b_i ≤ 50
+
+Subsoal 2 (32 Poin)
+
+- K = 1
+
+Subsoal 3 (25 Poin)
+
+- b_i ≥ 0
+
+Subsoal 4 (23 Poin)
+
+- Tidak ada batasan khusus

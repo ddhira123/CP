@@ -1,0 +1,113 @@
+Mencari Gaji
+
+[Deskripsi]
+
+Pak Chanek baru saja mendirikan sebuah perusahaan. Ia berhasil merekrut N orang pegawai tanpa terlebih dahulu menyebutkan gaji yang akan mereka terima. N orang pegawai tersebut dinomori dari 1 sampai N.
+
+Kini perusahaan Pak Chanek hampir berumur 1 bulan, yang artinya waktu gajian sudah dekat. Karena perusahaan tersebut belum pernah mendiskusikan gaji, terdapat beberapa permintaan pegawai mengenai besar gaji yang akan diperolehnya.
+
+Beberapa pegawai merasa performanya lebih baik dibanding pegawai lainnya. Karena itu, mereka meminta Pak Chanek agar gajinya lebih tinggi dibanding dengan pegawai yang performanya lebih buruk dari mereka.
+
+Selain itu, terdapat seorang pegawai S yang unik. Ia menganggap K orang pegawai adalah pembawa sial. Ia tidak ingin gaji yang ia terima sama dengan gaji K orang tersebut. K orang ini memiliki nomor X_1, X_2, sampai X_K.
+
+Pak Chanek yang baik hati berencana untuk memenuhi permintaan para pegawainya. Agar lebih mudah menentukan gaji, ia membutuhkan urutan gaji yang akan diterima tiap pegawainya. Pegawai yang memiliki gaji terendah mendapat urutan 1. Jika seorang pegawai memiliki besar gaji yang sama dengan pegawai yang lain, maka urutan mereka sama. Pegawai dengan gaji terbesar harus memiliki urutan gaji kurang dari atau sama dengan N.
+
+Pak Chanek merasa kesusahan. Ia meminta Anda untuk menentukan urutan gaji tiap pegawai. Terdapat dua kemungkinan urutan gaji yang mungkin Pak Chanek minta:
+
+    1. Urutan gaji bebas, selama memenuhi keinginan semua pegawai.
+    2. Urutan gaji yang leksikografis terkecil. Misal terdapat dua urutan gaji A dan B, dengan A_i dan B_i masing-masing menyatakan urutan gaji pegawai ke-i pada urutan gaji A dan B. Maka, A lebih kecil secara leksikografis dari B, jika dan hanya jika terdapat j, sehingga A_i = B_i untuk setiap i < j, dan A_j < B_j.
+
+Bantulah Pak Chanek menentukan urutan gaji pegawainya!
+
+[Format Masukan]
+
+Baris pertama berisi empat buah bilangan bulat N, M, K, dan S, masing-masing menyatakan banyak pegawai Pak Chanek, banyak permintaan pegawai, banyak pegawai yang dianggap pembawa sial, dan nomor pegawai unik.
+
+M baris berikutnya berisi U_i dan V_i, yaitu permintaan pegawai yang berarti gaji pegawai-U_i harus lebih kecil dari pada gaji pegawai-V_i.
+
+Baris selanjutnya berisi K buah X_i, yaitu pegawai yang dianggap pembawa sial. Apabila K = 0, baris ini berupa baris kosong. 
+
+Baris terakhir berisi sebuah bilangan bulat P, yang menyatakan kemungkinan urutan gaji yang Pak Chanek minta.
+
+[Format Keluaran]
+
+Keluarkan sebuah baris berisi N buah bilangan bulat, masing-masing dipisahkan spasi, dengan bilangan ke-i menandakan urutan gaji pegawai ke-i.
+
+Untuk kemungkinan pertama (P = 1), jika terdapat lebih dari satu jawaban, keluarkan yang mana saja.
+
+
+[Contoh Masukan 1]
+
+3 1 1 2
+1 3
+1
+1
+
+[Contoh Keluaran 1]
+
+1 3 2
+
+[Contoh Masukan 2]
+
+4 2 3 1
+4 3
+2 3
+2 3 4
+2
+
+[Contoh Keluaran 2]
+
+1 2 3 2
+
+[Penjelasan]
+
+Untuk contoh masukan pertama, terdapat beberapa jawaban lain yang mungkin, seperti:
+
+    - 1 2 3, karena gaji pegawai 1 kurang dari gaji pegawai 3 (1 < 3), dan gaji pegawai 2 berbeda dengan gaji pegawai 1 (2 ≠ 3).
+    - 1 2 2, karena gaji pegawai 1 kurang dari gaji pegawai 3 (1 < 2), dan gaji pegawai 2 berbeda dengan gaji pegawai 1 (2 ≠ 1).
+
+[Subsoal]
+
+Untuk semua subsoal, berlaku:
+
+- 2 ≤ N ≤ 50.000
+- 1 ≤ M ≤ 100.000
+- 0 ≤ K ≤ min(N-1, 100)
+- 1 ≤ S ≤ N
+- 1 ≤ U_i, V_i ≤ N
+- U_i ≠ V_i untuk setiap 1 ≤ i ≤ M
+- P = 1 atau P = 2
+- 1 ≤ X_i ≤ N untuk setiap 1 ≤ i ≤ K
+- X_i ≠ S untuk setiap 1 ≤ i ≤ K
+- Untuk tiap X_i, dijamin tidak terdapat j sehingga (U_j = S dan V_j = X_i), atau (U_j = X_i dan V_j = S)
+- Dijamin terdapat solusi
+
+Subsoal 1 (12 poin)
+
+- P = 1
+- 2 ≤ N ≤ 8
+- 1 ≤ M ≤ 16
+
+Subsoal 2 (20 poin)
+
+- P = 1
+- 2 ≤ N ≤ 2.000
+- 1 ≤ M ≤ 4.000
+
+Subsoal 3 (14 poin)
+
+- P = 1
+
+Subsoal 4 (18 poin)
+
+- P = 2
+- 0 ≤ K ≤ 5
+
+Subsoal 5 (16 poin)
+
+- P = 2
+- S = 1
+
+Subsoal 6 (20 poin)
+
+- P = 2

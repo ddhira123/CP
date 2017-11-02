@@ -1,0 +1,75 @@
+Pengurangan Chanek
+
+[Deskripsi]
+
+Pak Chanek kali ini sedang mengajar Struktur Data dan Algoritma di kelas yang Anda ikuti. Secara kebetulan, Pak Chanek ditugaskan untuk mengajar murid-murid yang super jenius. Semua murid di kelas tersebut sering mendapatkan nilai sempurna di kelas Pak Chanek.
+
+Pak Chanek bingung, bagaimana caranya ia mendapatkan murid terbaik untuk dijadikan bintang kelas jika semua muridnya mendapatkan nilai sempurna? Kemudian, Pak Chanek mendapatkan ide, yaitu dengan memberikan satu ujian pemrograman lagi kepada murid-muridnya.
+
+Ujian pemrograman Pak Chanek hanya mempunyai satu soal, yaitu sebagai berikut:
+
+Pak Chanek memiliki array dinamis A dengan ukuran N (indeks pertama adalah indeks ke-1). Selama ukuran array A lebih dari 1, lakukan langkah-langkah di bawah ini:
+
+    1. Pilih satu pasang indeks berbeda (i, j) pada array A.
+    2. Sisipkan A[i] - A[j] pada array A di posisi paling akhir.
+    3. Hapus elemen di indeks i dan j pada array A.
+
+Perhatikan bahwa langkah-langkah tersebut akan mengurangi ukuran array sebanyak 1. Setelah array A berukuran 1, satu-satunya elemen pada array A akan menjadi nilai ujian tersebut.
+
+Anda sebagai murid yang berambisi untuk memenangkan JCPC CompFest 9 harus membuktikan bahwa Anda murid paling jenius di kelas tersebut. Buatlah program untuk menghitung nilai ujian tertinggi yang bisa didapat!
+
+[Format Masukan]
+
+Baris pertama berisi sebuah bilangan bulat N, yaitu ukuran dari array A.
+Baris kedua berisi N bilangan A[i], yaitu nilai elemen array A pada indeks i.
+
+[Format Keluaran]
+
+Satu baris berisi sebuah bilangan bulat, yaitu nilai ujian tertinggi yang bisa didapat.
+
+[Contoh Masukan]
+
+4
+10 -6 35 -2
+
+[Contoh Keluaran]
+
+53
+
+[Penjelasan Contoh]
+
+Diberikan array A = [10, -6, 35, -2]
+Kita dapat melakukan langkah-langkah sebagai berikut:
+
+1. Ambil i = 3 dan j = 2, A[3] - A[2] = 41. Array A sekarang menjadi = [10, -2, 41]
+2. Ambil i = 2 dan j = 1, A[2] - A[1] = -12. Array A sekarang menjadi = [41, -12]
+3. Ambil i = 1 dan j = 2, A[1] - A[2] = 53. Array A sekarang menjadi = [53]
+
+Maka, nilai ujian yang didapat adalah 53. Tidak ada nilai yang lebih besar dari 53 yang bisa dicapai.
+
+[Subsoal]
+
+Untuk semua subsoal, berlaku:
+
+- 1 ≤ N ≤ 100.000
+- -10^9 ≤ A[i] ≤ 10^9
+
+Subsoal 1 (13 poin)
+
+- 1 ≤ N ≤ 5
+
+Subsoal 2 (39 poin)
+
+- 1 ≤ N ≤ 20
+
+Subsoal 3 (18 poin)
+
+- 1 ≤ N ≤ 2.000
+
+Subsoal 4 (15 poin)
+
+- 1 ≤ A[i] ≤ 10^9
+
+Subsoal 5 (15 poin)
+
+- Tidak ada batasan khusus

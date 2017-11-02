@@ -1,0 +1,82 @@
+Pagar Indah
+
+[Deskripsi]
+
+Pak Chanek memiliki pagar yang terdiri dari N papan. Masing-masing papan diwarnai dengan salah satu warna dari warna-warna yang dinomori 1 sampai N. Pak Chanek mengikuti perlombaan pagar indah. Nilai keindahan suatu pagar didefinisikan sebagai banyaknya kemungkinan deretan papan berurutan yang bisa diambil dari pagar tersebut sehingga warna dari semua papan yang diambil berwarna sama. Dengan kata lain, jika A_x adalah warna dari papan ke-x, nilai keindahan suatu pagar adalah banyaknya pasangan (i, j) sehingga 1 ≤ i ≤ j ≤ N, dan A_i = A_k untuk semua k yang memenuhi i ≤ k ≤ j.
+
+Pak Chanek ingin meningkatkan nilai keindahan pagarnya sebelum perlombaan pagar indah dimulai, tetapi ia hanya dapat mengubah warna maksimum sebanyak K papan (karena masalah biaya). Karena keterbatasan ini, Pak Chanek kesulitan menghitung nilai keindahan pagar maksimum yang dapat ia peroleh. Pak Chanek meminta bantuan Anda untuk mencari nilai tersebut. Bantulah Pak Chanek!
+
+[Format Masukan]
+
+Baris pertama berisi N dan K, banyak papan pada pagar Pak Chanek dan pengubahan warna maksimum yang dapat dilakukan Pak Chanek.
+
+Baris berikutnya berisi N bilangan, bilangan ke-i menyatakan A_i, yaitu warna dari pagar ke-i.
+
+[Format Keluaran]
+
+Keluarkan sebuah baris berisi satu buah bilangan bulat, nilai keindahan maksimum pagar Pak Chanek yang dapat ia peroleh.
+
+[Contoh Masukan 1]
+
+3 0
+1 2 2
+
+[Contoh Keluaran 1]
+
+4
+
+[Contoh Masukan 2]
+
+3 2
+1 2 2
+
+[Contoh Keluaran 2]
+
+6
+
+[Penjelasan]
+
+Pada contoh masukan 1, pasangan (i, j) yang memenuhi adalah:
+
+ 1. (1, 1)
+ 2. (2, 2)
+ 3. (2, 3)
+ 4. (3, 3)
+
+ Sehingga nilai keindahan pagar Pak Chanek adalah 4.
+
+Pada contoh masukan 2, Pak Chanek dapat mengubah warna papan pertama menjadi 2, sehingga nilai keindahan pagar Pak Chanek menjadi 6.
+
+[Subsoal]
+
+Untuk semua subsoal, berlaku:
+
+- 1 ≤ N ≤ 100.000
+- 0 ≤ K ≤ 2
+- 1 ≤ A_i ≤ N
+
+Subsoal 1 (7 Poin)
+
+- 1 ≤ N ≤ 3.000
+- K = 0
+
+Subsoal 2 (15 Poin)
+
+- K = 0
+
+Subsoal 3 (18 Poin)
+
+- 1 ≤ N ≤ 3.000
+- 0 ≤ K ≤ 1
+
+Subsoal 4 (22 Poin)
+
+- 0 ≤ K ≤ 1
+
+Subsoal 5 (15 Poin)
+
+- 1 ≤ N ≤ 3.000
+
+Subsoal 6 (23 Poin)
+
+- Tidak ada batasan khusus

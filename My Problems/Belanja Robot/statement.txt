@@ -1,0 +1,90 @@
+Belanja Robot
+
+[Deskripsi]
+
+Perusahaan yang terkenal karena memproduksi robot kucing bernama Doranemo baru saja membuka sebuah toko robot kucing. Terdapat N jenis robot kucing berbeda, dan terdapat tak hingga robot dari masing-masing jenis. Setiap jenis robot memiliki suatu harga dan tingkat fungsionalitas. Robot jenis ke-i memiliki harga P_i, dan tingkat fungsionalitas S_i. 
+
+Harga robot-robot di toko tersebut cukup unik. Untuk setiap pasang bilangan bulat (i, j), dengan 1 ≤ i, j ≤ N, berlaku setidaknya salah satu dari dua hal berikut:
+
+    - Harga robot jenis ke-i merupakan kelipatan harga robot jenis ke-j
+    - Harga robot jenis ke-j merupakan kelipatan harga robot jenis ke-i
+
+Karena penasaran dengan robot-robot tersebut, Pak Chanek melakukan pengamatan selama Q hari. Selama Q hari tersebut, setiap harinya terjadi tepat salah satu dari dua kejadian berikut:
+
+    1. Pak Chanek pergi ke toko dengan membawa uang sebanyak M. Pak Chanek lalu menetapkan dua buah bilangan bulat L dan R. Pak Chanek akan membeli robot-robot dengan jenis ke-L sampai ke-R sehingga total harganya tidak melebihi M, serta total tingkat fungsionalitasnya maksimum. Suatu jenis robot bisa dibeli lebih dari sekali, dan bisa saja ada jenis robot yang tidak dibeli sama sekali.
+    2. Toko mengubah tingkat fungsionalitas robot jenis ke-X menjadi Y.
+
+Pak Chanek sekarang memberikan kuis pada Anda: untuk setiap kejadian pembelian, berapa total tingkat fungsionalitas maksimum yang bisa Pak Chanek dapatkan?
+
+[Format Masukan]
+
+Baris pertama berisi dua buah bilangan bulat N dan Q, masing-masing menyatakan banyak jenis robot dan lama pengamatan Pak Chanek.
+Baris kedua berisi N buah bilangan P_i, harga robot jenis ke-i.
+Baris ketiga berisi N buah bilangan S_i, tingkat fungsionalitas robot jenis ke-i.
+Q baris berikutnya berisi salah satu dari dua masukan berikut:
+
+    - 1 L R M, yang berarti terjadi kejadian pembelian.
+    - 2 X Y, yang berarti terjadi kejadian pengubahan tingkat fungsionalitas.
+
+[Format Keluaran]
+
+Untuk setiap kejadian pembelian, keluarkan sebuah bilangan bulat, total tingkat fungsionalitas maksimum untuk pembelian tersebut.
+
+[Contoh Masukan 1]
+
+4 3
+1 3 6 3
+1 4 10 5
+1 1 4 90
+2 1 4
+1 1 4 90
+
+[Contoh Keluaran 1]
+
+150
+360
+
+[Penjelasan Contoh]
+
+Pada hari pertama, Pak Chanek menetapkan L = 1, R = 4, dan M = 90. Salah satu pembelian dengan total tingkat fungsionalitas maksimum adalah dengan membeli 11 robot jenis ke-3 dan 8 robot jenis ke-4, sehingga total harganya 11 * 6 + 8 * 3 = 90, dan total tingkat fungsionalitasnya 11 * 10 + 8 * 5 = 150.
+
+Pada hari kedua, tingkat fungsionalitas robot jenis ke-1 diubah menjadi 4.
+
+Pada hari ketiga, Pak Chanek menetapkan L = 1, R = 4, dan M = 90. Pembelian dengan total tingkat fungsionalitas maksimum adalah dengan membeli 90 robot jenis ke-1, sehingga total harganya 90 * 1 = 90, dan total tingkat fungsionalitasnya 90 * 4 = 360.
+
+[Subsoal]
+
+Untuk semua subsoal, berlaku:
+
+- 1 ≤ N ≤ 100.000
+- 1 ≤ Q ≤ 100.000
+- 1 ≤ P_i ≤ 100.000
+- Untuk setiap pasang (i, j), P_i merupakan kelipatan P_j atau P_j merupakan kelipatan P_i
+- 1 ≤ S_i ≤ 100.000
+- 1 ≤ L ≤ R ≤ N
+- 1 ≤ M ≤ 100.000
+- 1 ≤ X ≤ N
+- 1 ≤ Y ≤ 100.000
+- Terdapat setidaknya satu kejadian pembelian
+
+Subsoal 1 (16 poin)
+
+- 1 ≤ N ≤ 50
+- Q = 1
+
+Subsoal 2 (25 poin)
+
+- Q = 1
+
+Subsoal 3 (16 poin)
+
+- L = 1 untuk setiap kejadian pembelian
+- Tidak ada kejadian pengubahan tingkat fungsionalitas
+
+Subsoal 4 (19 poin)
+
+- Tidak ada kejadian pengubahan tingkat fungsionalitas
+
+Subsoal 5 (24 poin)
+
+- Tidak ada batasan khusus

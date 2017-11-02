@@ -1,0 +1,85 @@
+Percobaan FPB
+
+[Deskripsi]
+
+Pak Chanek adalah seorang programmer yang bekerja di Perusahaan X (SELLOUT). Manajer Perusahaan X menugaskan Pak Chanek untuk menghitung jumlahan dari elemen-elemen array yang dikembalikan oleh fungsi expand() (akan diberikan selanjutnya). Spesifiknya, Pak Chanek diberi suatu array A dengan panjang N, serta sebuah bilangan bulat K, lalu Pak Chanek ditugaskan untuk menghitung jumlahan dari elemen-elemen array yang dikembalikan fungsi expand(A, K).
+
+Berikut ini adalah pseudocode fungsi expand:
+
+function expand(array, K):
+    N ← panjang array
+    result ← array dengan panjang N*N
+
+    if K = 0:
+        return array
+
+    for i = 0, 1, 2, ..., N-1:
+        for j = 0, 1, 2, ..., N-1:
+            result[i*N + j] ← gcd(array[i], array[j])
+
+    return expand(result, K-1)
+
+Fungsi gcd(x, y) adalah fungsi yang akan mengembalikan nilai faktor persekutuan terbesar (FPB) dari x dan y.
+
+Setelah 15 menit berpikir dan 5 menit coding, Pak Chanek menyelesaikan tugas tersebut. Namun, saat programnya sedang berjalan, komputer Pak Chanek tiba-tiba berhenti bekerja. Karena Pak Chanek sudah kehilangan moodnya untuk ngoding, ia menugaskan Anda untuk menggantikannya dalam mengerjakan tugas tersebut. Gantikanlah Pak Chanek untuk mengerjakan tugas yang diberikan pada Pak Chanek!
+
+[Format Masukan]
+
+Baris pertama berisi N dan K, yaitu panjang array A dan konstanta yang dipakai dalam pemanggilan fungsi expand(). 
+Baris kedua berisi N buah bilangan bulat A_i, elemen ke-i dari array A (zero-based).
+
+[Format Keluaran]
+
+Keluarkan satu baris berisi sebuah bilangan bulat, jumlahan dari elemen-elemen array yang dikembalikan fungsi expand(A, K). Karena bilangan ini bisa sangat besar, Anda cukup mengembalikannya dalam modulo 10^9 + 7. 
+
+[Contoh Masukan 1]
+
+3 1
+3 8 12
+
+[Contoh Keluaran 1]
+
+39
+
+[Penjelasan]
+
+Hasil dari expand(A, K) pada contoh masukan 1 adalah [3, 1, 3, 1, 8, 4, 3, 4, 12]. Jumlahan dari semua elemennya adalah 3 + 1 + 3 + 1 + 8 + 4 + 3 + 4 + 12 = 39.
+
+[Subsoal]
+
+Untuk semua subsoal, berlaku:
+
+- 1 ≤ N ≤ 100.000
+- 1 ≤ K ≤ 100.000
+- 1 ≤ A_i ≤ 100.000
+
+Subsoal 1 (10 Poin)
+
+- 1 ≤ N ≤ 1.000
+- K = 1
+
+Subsoal 2 (20 Poin)
+
+- 1 ≤ A_i ≤ 1.000
+- 1 ≤ K ≤ 20
+
+Subsoal 3 (11 Poin)
+
+- A_i = A_j untuk setiap i < j
+- 1 ≤ K ≤ 20
+
+Subsoal 4 (4 Poin)
+
+- A_i = A_j untuk setiap i < j
+
+Subsoal 5 (30 Poin)
+
+- K = 1
+
+Subsoal 6 (19 Poin)
+
+- 1 ≤ K ≤ 20
+
+Subsoal 7 (5 Poin)
+
+- Tidak ada batasan khusus
