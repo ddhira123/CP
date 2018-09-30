@@ -1,0 +1,149 @@
+<h3>Deskripsi</h3>
+
+<p>Untuk persiapan agar dapat diterima kuliah di Universitas CFX, Pak Chanek sekarang sedang mengajari Chaneka yang
+    baru berumur 10 tahun tentang sifat-sifat suatu string. Pak Chanek memberikan Chaneka sebuah string S yang
+    mempunyai panjang N dan hanya berisi huruf alfabet kecil (&#39;a&#39; sampai &#39;z&#39;) saja, karakter terkiri
+    dari S adalah karakter ke-1 dan karakter terkanan dari S adalah karakter ke-N. Pak Chanek mempunyai 2 jenis
+    perintah, yaitu:</p>
+
+<ol>
+    <li>Mengubah karakter ke-X pada string S menjadi C;</li>
+    <li>Menghitung ada berapa banyak substring berbeda dari S[L..R] yang mana tidak ada karakter yang sama muncul lebih
+        dari 1 kali, dengan S[L..R] adalah substring S yang dimulai dari karakter ke-L sampai karakter ke-R.</li>
+</ol>
+
+<p>Dua buah substring dari S[L..R] (S[L<sub>1</sub>..R<sub>1</sub>] dan S<sub>2</sub>[L<sub>2</sub>..R<sub>2</sub>]
+    dengan L<sub>1</sub> &lt;= R<sub>1</sub>; L<sub>2</sub> &lt;= R<sub>2</sub>; L<sub>1</sub>, L<sub>2</sub> &gt;= L;
+    dan R<sub>1</sub>, R<sub>2</sub> &lt;= R) dianggap berbeda jika L<sub>1</sub> &ne; L<sub>2</sub> atau R<sub>1</sub>
+    &ne; R<sub>2</sub>.</p>
+
+<p>Pak Chanek memberi perintah-perintah tersebut kepada Chaneka sebanyak Q perintah dan Chaneka diminta untuk melakukan
+    perintah tersebut dengan cepat. Karena Chaneka kelelahan, ia meminta Anda untuk membuatkan program untuk
+    menyelesaikan perintah tersebut. Bantulah Chaneka!<br />
+    &nbsp;</p>
+
+<h3>Format Masukan</h3>
+
+<p>Baris pertama berisi 2 buah bilangan N dan Q, panjang dari string S dan banyaknya perintah yang diberikan.</p>
+
+<p>Baris kedua berisi sebuah string S.</p>
+
+<p>Q baris berikutnya berisi salah satu dari berikut:</p>
+
+<ul>
+    <li>1 X C, yang berarti ubah karakter ke-X menjadi C.</li>
+    <li>2 L R, yang berarti hitung ada berapa banyak substring berbeda dari S[L..R] yang mana tidak ada karakter yang
+        sama muncul lebih dari 1 kali, dengan S[L..R] adalah substring S yang dimulai dari karakter ke-L sampai
+        karakter ke-R.</li>
+</ul>
+
+<h3>Format Keluaran</h3>
+
+<p>Untuk setiap perintah tipe 2, keluarkan sebuah baris yang berisi hasil perhitungan dari perintah tersebut.
+    Dikarenakan hasilnya bisa cukup besar, keluarkan hasil modulo 10<sup>9</sup> + 7.</p>
+
+<h3>Contoh Masukan</h3>
+
+<pre>
+8 3
+compfest
+2 4 8
+1 3 o
+2 1 5</pre>
+
+<h3>Contoh Keluaran</h3>
+
+<pre>
+15
+9</pre>
+
+<h3>Penjelasan Contoh</h3>
+
+<p>Untuk perintah pertama, substring-substring dari S[4..8] yang tidak mengandung lebih dari 1 karakter yang sama
+    adalah:</p>
+
+<ol>
+    <li>S[4..4] = p</li>
+    <li>S[4..5] = pf</li>
+    <li>S[4..6] = pfe</li>
+    <li>S[4..7] = pfes</li>
+    <li>S[4..8] = pfest</li>
+    <li>S[5..5] = f</li>
+    <li>S[5..6] = fe</li>
+    <li>S[5..7] = fes</li>
+    <li>S[5..8] = fest</li>
+    <li>S[6..6] = e</li>
+    <li>S[6..7] = es</li>
+    <li>S[6..8] = est</li>
+    <li>S[7..7] = s</li>
+    <li>S[7..8] = st</li>
+    <li>S[8..8] = t</li>
+</ol>
+
+<p>Maka, jawaban dari perintah pertama adalah 15.</p>
+
+<p>Untuk perintah kedua, string S menjadi &#39;coopfest&#39;.</p>
+
+<p>Untuk perintah ketiga, substring-substring dari S[1..5] yang tidak mengandung lebih dari 1 karakter yang sama
+    adalah:</p>
+
+<ol>
+    <li>S[1..1] = c</li>
+    <li>S[1..2] = co</li>
+    <li>S[2..2] = o</li>
+    <li>S[3..3] = o</li>
+    <li>S[3..4] = op</li>
+    <li>S[3..5] = opf</li>
+    <li>S[4..4] = p</li>
+    <li>S[4..5] = pf</li>
+    <li>S[5..5] = f</li>
+</ol>
+
+<p>Maka, jawaban dari perintah ketiga adalah 9.<br />
+    &nbsp;</p>
+
+<h3>Subsoal</h3>
+
+<p>Untuk semua subsoal, berlaku:</p>
+
+<ul>
+    <li>1 &le; N, Q &le; 100.000</li>
+    <li>String S dijamin hanya berisi karakter dari &#39;a&#39; sampai &#39;z&#39;</li>
+    <li>Untuk setiap perintah tipe 1, 1 &le; X &le; N dan C dijamin berupa sebuah karakter dari &#39;a&#39; sampai
+        &#39;z&#39;</li>
+    <li>Untuk setiap perintah tipe 2, 1 &le; L &le; R &le; N</li>
+</ul>
+
+<h4>Subsoal 1 (7 poin)</h4>
+
+<ul>
+    <li>Dijamin tidak ada perintah tipe 1 pada masukan</li>
+    <li>Huruf-huruf pada string S terurut secara alfabetik</li>
+</ul>
+
+<h4>Subsoal 2 (23 poin)</h4>
+
+<ul>
+    <li>
+        <p>1 &le; N, Q &le; 1.000</p>
+    </li>
+</ul>
+
+<h4>Subsoal 3 (25 poin)</h4>
+
+<ul>
+    <li>Dijamin tidak ada perintah tipe 1 pada masukan</li>
+</ul>
+
+<h4>Subsoal 4 (45 poin)</h4>
+
+<ul>
+    <li>Tidak ada batasan khusus</li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<h3>Catatan</h3>
+
+<p>Suatu string S dikatakan terurut secara alfabetik jika dan hanya jika S<sub>i</sub> &le; S<sub>i+1</sub>&nbsp;untuk
+    1 &le; i &lt; N, yang artinya karakter ke-i pada S muncul lebih dulu dari karakter ke-(i+1) pada urutan alfabet.</p>

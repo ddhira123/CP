@@ -1,0 +1,54 @@
+Malam Keakraban
+
+[Deskripsi]
+
+Demi mempererat rasa kekeluargaan panitia KomPES, akan diadakan acara malam keakraban. Pada acara ini, N orang panitia KomPES akan dikumpulkan untuk makan-makan. Makan-makan ini akan dilakukan dengan duduk melingkar mengelilingi suatu api unggun yang besar. KomPES terdiri dari banyak divisi, dan diketahui bahwa panitia ke-i merupakan anggota divisi A_i. 
+
+Penyelenggara malam keakraban akan mengatur posisi duduk panitia. Tentunya, terdapat N posisi duduk, dengan posisi ke-(i+1) berada di sebelah kanan posisi ke-i untuk setiap 1 ≤ i < N, dan posisi ke-1 berada di sebelah kanan posisi ke-N. Penyelenggara mendefinisikan nilai kejelekan suatu pengaturan posisi duduk sebagai banyaknya i, sehingga divisi panitia yang duduk di posisi ke-i sama dengan divisi panitia yang duduk di sebelah kanannya.
+
+Penyelenggara malam keakraban ingin agar nilai kejelekan pada malam keakraban seminimum mungkin. Bantulah mereka mencari pengaturan dengan nilai kejelekena minimum!
+
+[Format Masukan]
+
+Baris pertama berisi sebuah bilangan bulat N, yang menyatakan banyaknya panitia KomPES.
+Baris kedua berisi N buah bilangan bulat A_i, yang menyatakan divisi panitia ke-i. 
+
+[Format Keluaran]
+
+Keluarkan satu baris berisi N buah bilangan bulat X_i, yang menyatakan bahwa panitia ke-X_i duduk di posisi ke-i. Apabila terdapat beberapa jawaban, keluarkan yang mana saja.
+
+[Contoh Masukan 1]
+
+4
+2 3 2 2
+
+[Contoh Keluaran 1]
+
+1 4 3 2
+
+[Penjelasan Contoh]
+
+Nilai kejelekan dari susunan 1 4 3 2 adalah 2, karena divisi panitia yang duduk di urutan ke-1 sama dengan divisi panitia yang duduk di urutan ke-2, dan divisi panitia yang duduk di urutan ke-2 sama dengan divisi panitia yang duduk di urutan ke-3. Tidak ada penyusunan yang memiliki nilai kejelekan lebih rendah dari 2.
+
+[Subsoal]
+
+Untuk semua subsoal, berlaku:
+
+- 2 ≤ N ≤ 100.000
+- 1 ≤ A_i ≤ N
+
+Subsoal 1 (11 poin)
+
+- 2 ≤ N ≤ 8
+
+Subsoal 2 (25 poin)
+
+- 2 ≤ N ≤ 14
+
+Subsoal 3 (35 poin)
+
+- 2 ≤ N ≤ 2.000
+
+Subsoal 4 (29 poin)
+
+- Tidak ada batasan khusus
